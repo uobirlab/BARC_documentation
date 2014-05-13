@@ -9,7 +9,6 @@
 %%
 %% This is a skeleton file demonstrating the use of IEEEtran.cls
 %% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
-%%
 %% Support sites:
 %% http://www.michaelshell.org/tex/ieeetran/
 %% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
@@ -352,7 +351,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Birmingham Autonomous Robot Club - BARC}
+\title{Birmingham Autonomous Robot Club (BARC) - Team Description Paper}
 
 
 % author names and affiliations
@@ -405,9 +404,8 @@ School of Computer Science, University of Birmingham, UK}
 
 \begin{abstract}
 %\boldmath
-Robotic competitions provide an interesting opportunity for students to use their knowledge from formal lectures in the real challenge. Moreover, they can influence and promote the robotic in public. The BARC is connecting a students from the School of Computer Science, University of Birmingham with strong motivation in such a competitions. They would like to take a part in the RoCKIn competition in 2014. For this reason, it will be beneficial  for them to also visit the RoCKIn camp 2014. 
-
-This arcticle provides an overview of this team, with focus on team members, they research interest and previous experiences. Also, it provides description of task that will be solved by the team as starting point with a time plan. The team's robot is also described in this article.
+Robotic competitions provide an excellent opportunity for students to use their knowledge and skills from formal lectures and research to real world challenging scenarios. Moreover, they can influence and promote robotics to the public. Experience and knowledge gained from these events pushes research into progressing faster and benefits the robotics community.
+Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the School of Computer Science, University of Birmingham, with strong motivation in robotic applications and competitions. This paper is part of our application for participating in the RoCKIn 2014 competition. It provides an overview of our team, including team members, description of their research interests and previous experiences. Also, it provides information on the team's robot and the hardware that will be used. Lastly, it is described in detail how the competition's tasks will be tackled by the team and the software implementation/architecture that it is currently used.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -436,16 +434,19 @@ This arcticle provides an overview of this team, with focus on team members, the
 \section{Introduction}
 % no \IEEEPARstart
 
-BARC team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to get more knowledge about robotics and to work on real robotic platforms. Students were getting familiar themselves with the ROS system architecture, mainly using libraries for robot localization and mapping. Also, they have chance to work with different robotics platforms.
+BARC team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to get more knowledge about robotics and to work on real robotic platforms and projects. Students were familiarising themselves with the Robot Operating System (ROS), by using a variety of ROS libraries and packages. Also, they had the chance to work with different robotics platforms.
 
-Several students involved in the team were solving more complicated projects, mainly useful to promote robotic during school's Open day. Such an example can be a robot Waitress, that accept orders for drinks and bring these items to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating a gestures of kids. An extra Kinect sensor was used to recognize children's gestures. In spite of these interesting projects, a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produce any comprehensive work.
+Several students involved in the team were solving more complicated projects, mainly useful to promote robotics during school's Open day. Such an example was a robot Waitress, that was accepting orders for drinks and was bringing them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating gestures of kids. An extra Kinect sensor was used to recognize children's gestures. In spite of these interesting projects a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produced any comprehensive work.
 
-In this year, the BARC structure was changed to the team taking part in the robotic competition. We would like to join RoCKIn@home competion next year because it provides interesting challenge. Moreover, the cooperation between more students is necessary. As a result, students can learn how to work in the team, but still work on some challenging part alone and learning be responsible for their work.
+This year, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gaining valuable knowledge while learning how to be responsible for their work.
 
+The team has the support of the Intelligent Robotic Lab (cite site here) in the school of Computer Science. The lab conducts research and has expertise in a variety of fields such as but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore the lab has strong links with the industry. 
+
+ 
 \section{Our focus and plan}
 %from rules: Innovative technology (if any) TODO describe usage of STRANDS
 %from rules: Reusability of the system or parts thereof - see STRANDS
-
+(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
 The team would like to join RoCKIn@Home competition, but the exact rules are not provided yet. Thus, we took a rules of the Robocup@Home challenge and we agree that we will focus on \textit{Follow me} and \textit{Cocktail party} tasks first. We discus the architecture of your system using the Dora robot, see Section \ref{sec:dora}.
 
 
@@ -453,7 +454,7 @@ The team would like to join RoCKIn@Home competition, but the exact rules are not
 \section{Team members}
 %from rules:  Main involved research areas in the team work
 
-In this time, all team members are students in the School of Computer Science, University of Birmingham. The overview of team members follows with more focus on these who would like to attend the RoCKIn camp. We assume to find more members to our team in incoming weeks.
+Currently all team members are students in the School of Computer Science, University of Birmingham. The overview of team members follows along with a description of their background and research interests. The final team line-up is likely to change until the competition as more members will contribute.
 
 \subsection{Lenka Mudrova}
 
@@ -468,50 +469,40 @@ Currently, she is working on a scheduling system that will be used in the first 
 
 Afterwards, she will extend this approach so that the scheduler can tackle other common issues that arise in the robotics domain – e.g., uncertainty about time duration of task, errors occurring during the execution of the task and so on. Also, she will add a planning approach and integrate it with the scheduler, so that more efficient scheduling of tasks can be achieved. In particular, she will investigate how different tasks can be mixed or executed in parallel, instead of the sequential execution usually present in state-of-the-art schedulers.
 
-\subsection{Ashish Kumar}
-
-He is a master student of the Robotic study branch. Right now, he is responsible for the gesture recognition module for the robot. He is extending previous work of another student in this area, so it is expected that he will finish and test his module in the January. After that, he is interested in the computer vision and machine learning, so it is assumed, he will become a key person in our module for object recognition. As a result, attending the RoCKIn camp will be beneficial to him.
-
-\subsubsection*{Scientific background}
-
-His main academic interests are autonomous systems and robotics. In past, he has worked on clinical decision support system for assessing risks associated with mental-health problems that is based on cognitive engineering. 
-
-He is now studying for masters in Robotics and interested in using computer vision for navigation. In particular, autonomous navigation in Unmanned Ariel Vehicles. He is also interested in machine learning and its use for object recognition in search and rescue operations. For example, building a swarm of UAVs that could collaborate with each other and autonomously survey a disaster struck area, looking for humans or other objects of interest. Timing is the key in such search and rescue operations. The disaster struck sites usually become inaccessible for hours if not days after the disaster strikes, which greatly hampers any rescue operation. Such a swarm of UAVs could be quickly deployed to over the site and search for humans amongst the debris.
-
 \subsection{Sean Bastable}
 
-He is an undergraduate student in the Computer Science but with focus on the robotic. He was in the BARC also previous year, so he has experiences with ROS and different robotic platforms. He is one of the two people working on a visual tracking system, using the skeleton body recognition and colour information. He is also interested in computer vision, thus the RoCKin camp will be beneficial for him.
+He is an undergraduate student in the Computer Science but with focus on robotics. As he was also a BARC member the previous year, he has experience with ROS and different robotic platforms. ((******He is one of the two people working on a visual tracking system, using the skeleton body recognition and colour information. He is also interested in computer vision, thus the RoCKin camp will be beneficial for him.****)) <- plz update this part.
 
 \subsubsection*{Scientific background}
  
- His final year project is investigating and implementing a visual localisation system for a mobile robot. This will allow the robot to continue to roughly localise in environments where laser based localisation cannot be used, for example when there are lots of people who may obstruct the laser scan and provide false readings. It will involve mounting a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
-
-The robot will be trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can then take additional pictures and compare them to the training images in order to find an estimate of its location. He will primarily be using PCA to match images in the localisation phase to those in the test phase but plan on also investigating other techniques and methods to improve the robustness of the system.
+ His final year project is about investigating and implementing a visual localization system for a mobile robot. This will allow the robot to continue localising in environments where laser based localisation cannot be used. A good example of this, are domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
+ 
+The project will involve mounting a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
+The robot will be trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can then take additional pictures and compare them to the training images in order to find an estimate of its location. He will primarily be using Principal Components Analysis (PCA) to match images in the localisation phase to those in the test phase. The planing of his project also involves investigating other techniques and methods to improve the robustness of the system.
 
 Another potential use of this is to provide an initial location estimate to a laser based localisation system in order to allow the robot to quickly localise from any position without any human input.
 
-This project follows on from my Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival, which Birmingham is hosting. One of the key failure points was if the robot became delocalised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
-
-\subsection{Maxime Adjigble}
-
-He is in the position of the robotic engineer in the school. He is working mainly on the PACMAN project (http://www.pacman-project.eu/). He is working with a strong group of robotic manipulation and he has also previous experiences with manipulation from industry. In the BARC team, he is currently working on the visual tracking module with Sean. It is expected, that he will become a key person for the manipulation if the team will decide to solve it next year.
-
-\subsection{Emmanuel Johnson}
-
-He is a master student in the Robotic study branch. He did his undergraduate studies in the United states when he had his summer project in the robotic group taking part in the DARPA challenge. Thus, he has strong motivation for robotic competitions. Now, he is working with Lenka on the robot controller.
+This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. One of the key failure points was if the robot became de-localised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
 
 \subsection{Manolis Chiou}
 
-He is a PhD student in Robotic. Now, he is not active member, but it is assumed that he will join actively team in January. His work is on variable autonomy on mobile tele operated robots, with applications such as search and rescue, bomb disposal and hazardous environments investigation. It will involve experiments in which humans are going to drive robots and we will measure performance and workload. Then he will take this knowledge and use out of the self algorithms on SLAM, navigation, vision etc. to make the autonomy of the robot change according to the situation (from pure tele operation to autonomous mode).
+He is a PhD student in the Intelligent robotics lab of School of Computer Science, University of Birmingham. He has a multidisciplinary background with hands on work on robots and AI. His work on BARC involves but is not limited to navigation, localization and in the future Human-Robot-Interaction (HRI) and different controllers.
+
+\subsubsection*{Scientific background}
+
+His first degree is in Control Engineering from the Technological Institute of Piraeus, in which he got involved in many robotic projects including demonstrating these projects to the public and exhibitions. His undergraduate thesis was on implementing control algorithms to robots (e.g. Model Predictive Control for stability/balance on moving platforms). He has a MSc in Computational Intelligence with his master thesis be on formation and transportation of objects with a swarm of robots.  
+
+The title of his PhD thesis is ``Flexible robotic control via co-operation between an Operator and an AI based control system". It addresses the problem of variable autonomy in teleoperated mobile robots. Variable autonomy refers to the different levels of autonomous capabilities that are implemented on a robot. Robots used on demanding and safety critical tasks (e.g. search and rescue, hazardous environments inspection, bomb disposal), which are currently teleoperated, could soon start to benefit from autonomous capabilities, such as algorithms for automatic robot navigation or algorithms for SLAM. Robots could usefully use AI control algorithms to autonomously take control of certain functions when the human operator is suffering a high workload, high cognitive load, anxiety, or other distractions and stresses. In contrast, some circumstances may still necessitate direct human control of the robot.
+
+The research will tackle the problem by designing a mixed-initiative control algorithm for switching between the different autonomy levels in an optimal way. Mixed-initiative refers to the peer-to-peer relationship between the robot and the operator in terms of the authority to initiate actions and changes in the autonomy level. Research will be conducted and evaluated in a principled way by designing experiments with methods drawn from human factors, psychology, Human-Robot-Interaction and robotics. Lastly, State of the art AI algorithms (e.g. SLAM, navigation etc.) will be implemented on ROS and tested for improving the performance of this variable autonomy - mixed initiative framework.
+
 
 \section{Hardware}
 %TODO change it and enlarge it
 %from rules: Description of the hardware, including an image of the robot(s)
-The team has an official support of the Intelligence Robotic Lab in the school of Computer Science. The robot Dora was kindly given for team needs. Moreover, team members have an access to the different sensors, such as laser scanners and depth cameras. Now, Dora robot has no manipulator, but we are planning to mount one spare small manipulator that is not in use now on her in the future.
+The robot Dora (a pioneer robot) was kindly given for the team's needs. Furthermore, team members have access to different sensors such as laser scanners and depth cameras. At the moment Dora has no manipulator arm installed. In the future it is planned to mount one small manipulator arm in order to extent Dora's capabilities and allow for participation in more challenging scenarios in future competitions.
 
-The BARC team is now using the Dora robot, see Fig.\ref{fig:dora}. It is the Pioneer 3D-X robotic platform with the Hokuyo laser scanner in the front and the Kinect depth camera mounted on pan-tilt unit. It is placed on the stick to get snapshot from better heigh than just place it on the Pioneer robot. The robot code will be built for the ROS system.
-
-Dora robot has also a travel luggage, thus it is possible to take her to the camp, but the team is not sure if it is beneficial because she has no manipulator. As a result, she is not useful for manipulation task. For a object detection task, it might be more easily to take some spare depth cameras. If we will accepted to the camp, we would like to discuss this issue more.
+Dora robot (see Fig.\ref{fig:dora}) is a Pioneer 3D-X robotic platform with a Hokuyo laser scanner in the front and a Kinect depth camera mounted on a pan-tilt unit. It is placed on the stick to get snapshot from better heigh than just place it on the Pioneer robot. Dora has also a travel luggage kit, thus it is possible to take her to the competition.
 
 
 \begin{figure}[!t]
@@ -525,8 +516,29 @@ Dora robot has also a travel luggage, thus it is possible to take her to the cam
 \end{figure}
 
 \section{Software architecture}
-%TODO create
-%from rules: Description of the software, esp. the functional and software architectures, as well as middleware used
+The system is composed of several independent programs/nodes and thus reusable parts of code with different functionality.  The different nodes communicate between them by exchanging ROS messages and ROS actions. The core element of our framework that binds the rest of the node/processes together is a state machine node. (needs heavy editing this part)
+
+\subsection{Middleware-Robot Operating System}
+Robot Operating System (ROS) (cite here) will be used as the middleware. ROS open source philosophy is powerful and allows code re-usability by different programmers. It allows us to use robust, state of the art or our own AI algorithms without worrying about how to write code for low level motor commands or sensor drivers. Even more important is the fact that can save valuable time that otherwise would be spend in merging different architectures or worrying of how different pieces of software would communicate with each other. Lastly, ROS was also chosen as it has become almost a standard choice for researchers and thus our lab has extensive hands on experience.
+
+\subsection{State machine}
+The core element of our framework that binds the rest of the node/processes together is a state machine node. It is responsible for monitoring the state of the robot and the world. Also it is responsible for deciding what is going to be the next robot action. It was developed with ROS SMACH framework and it works by....
+
+\subsection{Building the map with SLAM}
+Since the map is it assumed to be known there is a need to build it before further tests can be done. For initially building a map we made use of the OpenSlam's Gmapping algorithm (citation) through the ROS wrapper package slam gmapping. It uses bla bla...
+
+\subsection{Localising in a known map with adaptive Monte Carlo localisation}
+After the map is known and saved, Adaptive Monte Carlo Localisation (AMCL) algorithm (is part of the ROS navigation stack - see next section) is used to localise the robot inside the environment. It uses robot odometry and laser range finder readings to update a particle filter that is representing the uncertainty of robot's position within the known map. The robot's pose estimate is then published through a ROS topic...
+
+\subsection{Navigation}
+For navigation and obstacle avoidance, ROS navigation stack is used. It is a proven robust solution for domestic environments (citation here of marathon). More specifically navigation stack reads the odometry, the pose estimate and laser range finder scans from the relevant topics and drives safety the robot inside the environment to some goal. The goal is represented by some given coordinates. For example it drives the robot to the door coordinates, where the robot should perform its face recognition to the person ringing the bell. For achiving this it make use of a global and a local planer. The global planner creates an optimal global path based on robot's pose and a global costmap. Then a local planner, making use of the Dynamic Window Approach algorithm (citation here), is responsible for following that global path and reactively avoiding obstacles.
+
+\subsection{Mixed initiative controller and teleoperation}
+These nodes were made as part of another project involving mixed initiative Human-Robot Interaction (HRI) in emergency response robots. Thus, the name is not representative of their exact functionality in this case. The controller it is used to decide which velocity commands to give to the motors whenever some coupling of commands is needed. On one hand are the motor commands coming from robot's AI (e.g. AI navigation) and on the other hand are motor commands coming from a teleoperation node and a human through a joystick. Although the robot is autonomous, the latter is necessary as the user needs to place the robot in the initial state, move it around during testing just by pausing AI commands, or stop the robot in the case of an emergency (e.g. robot repeatedly hitting a wall, so the user has to stop it and drive it away).  This is another example of code which can be reused in many different applications.
+
+\subsection{Dora navigation goals node}
+\subsection{Face recognition}
+\subsection{Transformations}
 
 \section{Future work}
 %and maybe enlargements?
