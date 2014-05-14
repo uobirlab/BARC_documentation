@@ -434,19 +434,20 @@ Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the
 \section{Introduction}
 % no \IEEEPARstart
 
-BARC team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to get more knowledge about robotics and to work on real robotic platforms and projects. Students were familiarising themselves with the Robot Operating System (ROS), by using a variety of ROS libraries and packages. Also, they had the chance to work with different robotics platforms.
+BARC team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to get more knowledge about robotics and to work on real robotic platforms and projects. Students were familiarising themselves with the Robot Operating System (ROS), by using a variety of ROS libraries and packages. %Also, they had the chance to work with different robotics platforms.
 
 Several students involved in the team were solving more complicated projects, mainly useful to promote robotics during school's Open day. Such an example was a robot Waitress, that was accepting orders for drinks and was bringing them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating gestures of kids. An extra Kinect sensor was used to recognize children's gestures. In spite of these interesting projects a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produced any comprehensive work.
 
-This year, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gaining valuable knowledge while learning how to be responsible for their work.
+This year, BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gaining valuable knowledge while learning how to be responsible for their work.
 
+%TODO citation here
 The team has the support of the Intelligent Robotic Lab (cite site here) in the school of Computer Science. The lab conducts research and has expertise in a variety of fields such as but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore the lab has strong links with the industry. 
 
  
 \section{Our focus and plan}
 %from rules: Innovative technology (if any) TODO describe usage of STRANDS
 %from rules: Reusability of the system or parts thereof - see STRANDS
-(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
+%(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
 The team would like to join RoCKIn@Home competition, but the exact rules are not provided yet. Thus, we took a rules of the Robocup@Home challenge and we agree that we will focus on \textit{Follow me} and \textit{Cocktail party} tasks first. We discus the architecture of your system using the Dora robot, see Section \ref{sec:dora}.
 
 
@@ -454,16 +455,21 @@ The team would like to join RoCKIn@Home competition, but the exact rules are not
 \section{Team members}
 %from rules:  Main involved research areas in the team work
 
-Currently all team members are students in the School of Computer Science, University of Birmingham. The overview of team members follows along with a description of their background and research interests. The final team line-up is likely to change until the competition as more members will contribute.
+Currently, team has four active members - one bachelor student and three PhD students in first year of their studies. All team members are students in the School of Computer Science, University of Birmingham. The overview of team members follows along with a description of their background and research interests. The final team line-up is likely to change until the competition as more members will contribute.
 
 \subsection{Lenka Mudrova}
 
-Her role in the team is mainly team leader. She is doing the organization work, such as reports from regular meetings, website presentation and communication with the school about support. She is also a technical manager, this means that she is meeting with single groups solving a particular robot module and try to understand briefly all the system. As a result, she is creating a bridge between the groups and she takes care that everyone knows what is happening and how the modules will communicate and so on. Instead of this, she is working on the robot controller.
+She is a PhD student with research interest at AI planning and scheduling. In the team, she has two roles. First, she is the team leader, which includes mainly representation of the team, when formal communication outside of the team is necessary. Also, she takes care that every member of the team knows what is happening, how their modules will be used within the system and what is required from them. The second role is that she is working also on robot's subsystem. Her research interest in AI planning will be useful for creating an overall robot's behaviour. Moreover, she is interested in computer vision and speech recognition. 
 
 \subsubsection*{Scientific background}
-Her previous background is also in the robotics, mainly focus on localization of robots. She was involved as a team leader of student robotic team before in the Czech Republic, as you can see from her CV sent as a separate file.
+She did her bachelor and master studies at the Czech Technical University in Prague with focus on Robotics. This study branch give her wide range of knowledges from fields of mechatronics and artificial intelligence. She was involved as a team leader of student robotic team FELaaCZech that took part in the international competition Eurobot for four years. Moreover, she was a member of team participating in robotic outdoor challenge RoboTour and Sick Robotic day. 
 
-Nowadays, she is a PhD student with the focus on robotics. Her PhD thesis topic is "Cognitive control framework for long-term autonomy". Broadly speaking, the goal her thesis is to create a collection of functions to schedule and plan tasks for a robot that will exploit long-term experiences and observations. Her work is influenced by the EU STRANDS project (http://strands-project.eu/). Citating from the project’s abstract: "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)."
+Nowadays, she is a PhD student with focus on AI planning and scheduling, which are important techniques for a robot to make a decisions when, how and what needs to be performed. Such decisions are necessary in service robotics, when a robot should fulfil tasks assigned by a human. 
+The robot needs to have a control framework that makes decisions concerning which particular task should be executed. The quality of the decisions influence the overall performance of the robot and of course, the robot's goal must be to satisfy as many of the requirements assigned by people as possible. Requirements for the robot's control framework are deadline awareness, handling uncertainty about task duration and resources, creating plans on how to complete general tasks and awareness of changes in the environment where the robot operates. 
+
+%TODO: change this
+Her PhD thesis topic is "Robotic control framework for scheduling of merged plans". 
+Broadly speaking, the goal of her thesis is to create a collection of functions to schedule and plan tasks for a robot in the way that tasks will not be performed in a sequence order, but more effective robot's behaviour will be found by merging of tasks. Moreover, the framework will exploit long-term experiences and observations of robot's world. Her research is influenced by the EU STRANDS project (http://strands-project.eu/). "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." %TODO citation here
 
 Currently, she is working on a scheduling system that will be used in the first year of the project. This system will be based on state-of-the-art schedulers. Each input task is defined by a time window when it needs to be executed, expected duration and where in the environment the task should be performed. The scheduler will then output an ordering for the list of input tasks. It also will handle "on-demand" tasks, thus it will also include a rescheduling procedure for when a new task arrives.
 
