@@ -462,33 +462,28 @@ Currently, team has four active members - one bachelor student and three PhD stu
 She is a PhD student with research interest at AI planning and scheduling. In the team, she has two roles. First, she is the team leader, which includes mainly representation of the team, when formal communication outside of the team is necessary. Also, she takes care that every member of the team knows what is happening, how their modules will be used within the system and what is required from them. The second role is that she is working also on robot's subsystem. Her research interest in AI planning will be useful for creating an overall robot's behaviour. Moreover, she is interested in computer vision and speech recognition. 
 
 \subsubsection*{Scientific background}
-She did her bachelor and master studies at the Czech Technical University in Prague with focus on Robotics. This study branch give her wide range of knowledges from fields of mechatronics and artificial intelligence. She was involved as a team leader of student robotic team FELaaCZech that took part in the international competition Eurobot for four years. Moreover, she was a member of team participating in robotic outdoor challenge RoboTour and Sick Robotic day. 
+She did her bachelor and master studies at the Czech Technical University in Prague with focus on Robotics. This study branch give her wide range of knowledges from fields of mechatronics and artificial intelligence. She was involved as a team leader of the student robotic team FELaaCZech that took part in the international competition Eurobot for four years. Moreover, she was a member of team participating in robotic outdoor challenge RoboTour and Sick Robotic day. 
 
 Nowadays, she is a PhD student with focus on AI planning and scheduling, which are important techniques for a robot to make a decisions when, how and what needs to be performed. Such decisions are necessary in service robotics, when a robot should fulfil tasks assigned by a human. 
 The robot needs to have a control framework that makes decisions concerning which particular task should be executed. The quality of the decisions influence the overall performance of the robot and of course, the robot's goal must be to satisfy as many of the requirements assigned by people as possible. Requirements for the robot's control framework are deadline awareness, handling uncertainty about task duration and resources, creating plans on how to complete general tasks and awareness of changes in the environment where the robot operates. 
 
-%TODO: change this
-Her PhD thesis topic is "Robotic control framework for scheduling of merged plans". 
-Broadly speaking, the goal of her thesis is to create a collection of functions to schedule and plan tasks for a robot in the way that tasks will not be performed in a sequence order, but more effective robot's behaviour will be found by merging of tasks. Moreover, the framework will exploit long-term experiences and observations of robot's world. Her research is influenced by the EU STRANDS project (http://strands-project.eu/). "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." %TODO citation here
+The assigned task might have some time constraints, for example release and due dates. Therefore, scheduling techniques are important to handle this. Each task has also defined goal or activity, which needs to be achieved or performed, respectively. This performance can be represented by state machine for well defined tasks. However, planning techniques are needed for more general tasks, for example finding of an object, which position varies  in a robot's environment.
 
-Currently, she is working on a scheduling system that will be used in the first year of the project. This system will be based on state-of-the-art schedulers. Each input task is defined by a time window when it needs to be executed, expected duration and where in the environment the task should be performed. The scheduler will then output an ordering for the list of input tasks. It also will handle "on-demand" tasks, thus it will also include a rescheduling procedure for when a new task arrives.
+Her research is influenced by the EU STRANDS project (http://strands-project.eu/). "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." %TODO citation here
+Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
 
-Afterwards, she will extend this approach so that the scheduler can tackle other common issues that arise in the robotics domain – e.g., uncertainty about time duration of task, errors occurring during the execution of the task and so on. Also, she will add a planning approach and integrate it with the scheduler, so that more efficient scheduling of tasks can be achieved. In particular, she will investigate how different tasks can be mixed or executed in parallel, instead of the sequential execution usually present in state-of-the-art schedulers.
+\subsection{Marco Antonio Becerra Pedraza}
 
-\subsection{Sean Bastable}
+He obtained his B.Eng. degree in Mechatronics from the Instituto Politécnico Nacional in Mexico and the M.Eng. degree in Computer Science from the Universidad Nacional Autónoma de México. He is a former member of the PUMAS RoboCup@Home team. Nowadays, he is PhD student with research interests including 3D perception, human sensing, knowledge representation and reasoning for robotics.
 
-He is an undergraduate student in the Computer Science but with focus on robotics. As he was also a BARC member the previous year, he has experience with ROS and different robotic platforms. ((******He is one of the two people working on a visual tracking system, using the skeleton body recognition and colour information. He is also interested in computer vision, thus the RoCKin camp will be beneficial for him.****)) <- plz update this part.
+\subsubsection*{Research Interests}
 
-\subsubsection*{Scientific background}
- 
- His final year project is about investigating and implementing a visual localization system for a mobile robot. This will allow the robot to continue localising in environments where laser based localisation cannot be used. A good example of this, are domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
- 
-The project will involve mounting a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
-The robot will be trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can then take additional pictures and compare them to the training images in order to find an estimate of its location. He will primarily be using Principal Components Analysis (PCA) to match images in the localisation phase to those in the test phase. The planing of his project also involves investigating other techniques and methods to improve the robustness of the system.
+He started his PhD studies five months ago, thus he has not yet specified his research topic. However, he is interested in two fields, semantic mapping and activity recognition.
 
-Another potential use of this is to provide an initial location estimate to a laser based localisation system in order to allow the robot to quickly localise from any position without any human input.
+Semantic mapping can be conceived as an extension of a mapping problem in robotics [Nuchter08_TowardsSemanticMaps]. Traditional maps take in consideration a spatial shape of an environment for motion planning purposes (e.g. navigation, localization). But generally, the environment has a more complex structure. Therefore, the role of semantic maps is to add concrete descriptions of components of the environment, their structure and relations. The robot can reason about the scene (e.g. planning, prediction, explanation, interpretation) using this descriptions in semantic map.
 
-This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. One of the key failure points was if the robot became de-localised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
+Activity recognition.- 
+Service robots should share scenarios with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot need to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. The goal of activity recognition is to be able of building representations of activity from observations; specially interesting are qualitative spatio-temporal representations of activity, because they are more human alike and they can be used in general cases.
 
 \subsection{Manolis Chiou}
 
@@ -502,6 +497,20 @@ The title of his PhD thesis is ``Flexible robotic control via co-operation betwe
 
 The research will tackle the problem by designing a mixed-initiative control algorithm for switching between the different autonomy levels in an optimal way. Mixed-initiative refers to the peer-to-peer relationship between the robot and the operator in terms of the authority to initiate actions and changes in the autonomy level. Research will be conducted and evaluated in a principled way by designing experiments with methods drawn from human factors, psychology, Human-Robot-Interaction and robotics. Lastly, State of the art AI algorithms (e.g. SLAM, navigation etc.) will be implemented on ROS and tested for improving the performance of this variable autonomy - mixed initiative framework.
 
+\subsection{Sean Bastable}
+
+He is an bachelor student in his final year. It is expected that he will continue in his studies at master degree. He was also BARC member the previous year, so he has solid experience with ROS and different robotic platforms. He also attended RoCKIn camp 2014 in Rome.
+
+\subsubsection*{Scientific background}
+ 
+His final year project was about investigating and implementing a visual localization system for a mobile robot. This allowed the robot to continue localising in environments where laser based localisation cannot be used. A good example of this, are domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
+ 
+The project used a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
+The robot was trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can then take additional pictures and compare them to the training images in order to find an estimate of its location. Principal Components Analysis (PCA) was used to match images in the localisation phase to those in the test phase. 
+
+Another potential use of this project is to provide an initial location estimate to a laser based localisation system in order to allow the robot to quickly localise from any position without any human input.
+
+This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. As a robot was moving in the crowd One of the key failure points was if the robot became de-localised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
 
 \section{Hardware}
 %TODO change it and enlarge it
