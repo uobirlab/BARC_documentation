@@ -49,28 +49,11 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-
-
-% Note that the a4paper option is mainly intended so that authors in
-% countries using A4 can easily print to A4 and see how their papers will
-% look in print - the typesetting of the document will not typically be
-% affected with changes in paper size (but the bottom and side margins will).
-% Use the testflow package mentioned above to verify correct handling of
-% both paper sizes by the user's LaTeX system.
-%
 % Also note that the "draftcls" or "draftclsnofoot", not "draft", option
 % should be used if it is desired that the figures are to be displayed in
 % draft mode.
 %
 \documentclass[conference]{IEEEtran}
-% Add the compsoc option for Computer Society conferences.
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[conference]{../sty/IEEEtran}
-
-
-
 
 
 % Some very useful LaTeX packages include:
@@ -97,12 +80,8 @@
 
 
 
-
-
-
 % *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
+\usepackage{cite}
 % cite.sty was written by Donald Arseneau
 % V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
 % \cite{} output to follow that of IEEE. Loading the cite package will
@@ -117,9 +96,6 @@
 % The latest version can be obtained at:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
 % The documentation is contained in the cite.sty file itself.
-
-
-
 
 
 
@@ -143,28 +119,6 @@
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation can
-% be obtained at: 
-% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
-% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
 
 
 % *** MATH PACKAGES ***
@@ -188,8 +142,6 @@
 
 
 
-
-
 % *** SPECIALIZED LIST PACKAGES ***
 %
 %\usepackage{algorithmic}
@@ -208,7 +160,6 @@
 % Also of interest may be the (relatively newer and more customizable)
 % algorithmicx.sty package by Szasz Janos:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
-
 
 
 
@@ -245,9 +196,6 @@
 % (automatically sized) equal width boxes - aka "natural width parboxes".
 % Available at:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
-
-
-
 
 
 % *** SUBFIGURE PACKAGES ***
@@ -320,20 +268,9 @@
 
 
 
-
-
 % *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
-% Read the url.sty source comments for usage information. Basically,
+\usepackage{url}
 % \url{my_url_here}.
-
-
-
 
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
@@ -391,8 +328,6 @@ School of Computer Science, University of Birmingham, UK}
 %\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
 
 
-
-
 % use for special paper notices
 %\IEEEspecialpapernotice{(Invited Paper)}
 
@@ -405,7 +340,8 @@ School of Computer Science, University of Birmingham, UK}
 \begin{abstract}
 %\boldmath
 Robotic competitions provide an excellent opportunity for students to use their knowledge and skills from formal lectures and research to real world challenging scenarios. Moreover, they can influence and promote robotics to the public. Experience and knowledge gained from these events pushes research into progressing faster and benefits the robotics community.
-Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the School of Computer Science, University of Birmingham, with strong motivation in robotic applications and competitions. This paper is part of our application for participating in the RoCKIn 2014 competition. It provides an overview of our team, including team members, description of their research interests and previous experiences. Also, it provides information on the team's robot and the hardware that will be used. Lastly, it is described in detail how the competition's tasks will be tackled by the team and the software implementation/architecture that it is currently used.
+
+Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the School of Computer Science, University of Birmingham, with strong motivation in robotic applications and competitions. This paper is part of our application for participating in the RoCKIn 2014 competition. It provides an overview of our team, including team members, description of their research interests and previous experiences. Also, it provides information on the team's robot and the hardware that will be used. Lastly, it is described in detail how the competition's tasks will be tackled by the team and the software implementation/architecture that is currently used.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -438,17 +374,16 @@ BARC team was established five years ago in the School of Computer Science at th
 
 Several students involved in the team were solving more complicated projects, mainly useful to promote robotics during school's Open day. Such an example was a robot Waitress, that was accepting orders for drinks and was bringing them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating gestures of kids. An extra Kinect sensor was used to recognize children's gestures. In spite of these interesting projects a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produced any comprehensive work.
 
-This year, BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gaining valuable knowledge while learning how to be responsible for their work.
+This year, BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gain valuable knowledge while learning how to be responsible for their work.
 
-%TODO citation here
-The team has the support of the Intelligent Robotic Lab (cite site here) in the school of Computer Science. The lab conducts research and has expertise in a variety of fields such as but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore the lab has strong links with the industry. 
+The team has the support of the Intelligent Robotics Lab \cite{irlab} in the school of Computer Science. The lab conducts research and has expertise in a variety of fields such as but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore the lab has strong links with the industry. 
 
  
 \section{Our focus and plan}
 %from rules: Innovative technology (if any) TODO describe usage of STRANDS
 %from rules: Reusability of the system or parts thereof - see STRANDS
 %(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
-The team would like to join RoCKIn@Home competition, but the exact rules are not provided yet. Thus, we took a rules of the Robocup@Home challenge and we agree that we will focus on \textit{Follow me} and \textit{Cocktail party} tasks first. We discus the architecture of your system using the Dora robot, see Section \ref{sec:dora}.
+The team would like to join RoCKIn@Home competition, but the exact rules are not provided yet. Thus, we took a rules of the Robocup@Home challenge and we agree that we will focus on \textit{Follow me} and \textit{Cocktail party} tasks first. We discus the architecture of your system using the Dora robot, see Section %\ref{sec:dora}.
 
 
 
@@ -480,10 +415,9 @@ He obtained his B.Eng. degree in Mechatronics from the Instituto Politécnico Na
 
 He started his PhD studies five months ago, thus he has not yet specified his research topic. However, he is interested in two fields, semantic mapping and activity recognition.
 
-Semantic mapping can be conceived as an extension of a mapping problem in robotics [Nuchter08_TowardsSemanticMaps]. Traditional maps take in consideration a spatial shape of an environment for motion planning purposes (e.g. navigation, localization). But generally, the environment has a more complex structure. Therefore, the role of semantic maps is to add concrete descriptions of components of the environment, their structure and relations. The robot can reason about the scene (e.g. planning, prediction, explanation, interpretation) using this descriptions in semantic map.
+Semantic mapping can be conceived as an extension of a mapping problem in robotics \cite{Nuchter08_TowardsSemanticMaps}. Traditional maps take in consideration a spatial shape of an environment for motion planning purposes (e.g. navigation, localization). But generally, the environment has a more complex structure. Therefore, the role of semantic maps is to add concrete descriptions of components of the environment, their structure and relations. The robot can reason about the scene (e.g. planning, prediction, explanation, interpretation) using this descriptions in semantic map.
 
-Activity recognition.- 
-Service robots should share scenarios with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot need to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. The goal of activity recognition is to be able of building representations of activity from observations; specially interesting are qualitative spatio-temporal representations of activity, because they are more human alike and they can be used in general cases.
+Activity recognition. Service robots should share scenarios with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot need to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. The goal of activity recognition is to be able of building representations of activity from observations; specially interesting are qualitative spatio-temporal representations of activity, because they are more human alike and they can be used in general cases.
 
 \subsection{Manolis Chiou}
 
@@ -522,16 +456,20 @@ Dora robot (see Fig.\ref{fig:dora}) is a Pioneer 3D-X robotic platform with a Ho
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=2.in]{dorafinal.jpg}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
+\includegraphics[width=3.in]{dorafinal.jpg}
 \caption{Dora robot}
 \label{fig:dora}
 \end{figure}
 
 \section{Software architecture}
-The system is composed of several independent programs/nodes and thus reusable parts of code with different functionality.  The different nodes communicate between them by exchanging ROS messages and ROS actions. The core element of our framework that binds the rest of the node/processes together is a state machine node. (needs heavy editing this part)
+The system is composed of several independent programs/nodes and thus reusable parts of code with different functionality. The different nodes communicate between them by exchanging ROS messages and ROS actions \ref{fig:nodes}. The core element of our framework that binds the rest of the node/processes together is a state machine node. (needs heavy editing this part)
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4.in]{nodes.png}
+\caption{An overview of the software architecture and how the nodes are connected interact with each other}
+\label{fig:nodes}
+\end{figure}
 
 \subsection{Middleware-Robot Operating System}
 Robot Operating System (ROS) (cite here) will be used as the middleware. ROS open source philosophy is powerful and allows code re-usability by different programmers. It allows us to use robust, state of the art or our own AI algorithms without worrying about how to write code for low level motor commands or sensor drivers. Even more important is the fact that can save valuable time that otherwise would be spend in merging different architectures or worrying of how different pieces of software would communicate with each other. Lastly, ROS was also chosen as it has become almost a standard choice for researchers and thus our lab has extensive hands on experience.
@@ -540,19 +478,33 @@ Robot Operating System (ROS) (cite here) will be used as the middleware. ROS ope
 The core element of our framework that binds the rest of the node/processes together is a state machine node. It is responsible for monitoring the state of the robot and the world. Also it is responsible for deciding what is going to be the next robot action. It was developed with ROS SMACH framework and it works by....
 
 \subsection{Building the map with SLAM}
-Since the map is it assumed to be known there is a need to build it before further tests can be done. For initially building a map we made use of the OpenSlam's Gmapping algorithm (citation) through the ROS wrapper package slam gmapping. It uses bla bla...
+Since the map is it assumed to be known there is a need to build it before further tests can be done. For initially building a map we made use of the OpenSlam's GMapping algorithm \cite{slam} through the ROS wrapper package called slam gmapping. This approach uses a Rao-Blackwellized particle filter in which each particle carries an individual map of the environment.  The particles are updated by taking into account both odometry and the latests observations from a laser range finder.
 
 \subsection{Localising in a known map with adaptive Monte Carlo localisation}
-After the map is known and saved, Adaptive Monte Carlo Localisation (AMCL) algorithm (is part of the ROS navigation stack - see next section) is used to localise the robot inside the environment. It uses robot odometry and laser range finder readings to update a particle filter that is representing the uncertainty of robot's position within the known map. The robot's pose estimate is then published through a ROS topic...
+After the map is known and saved, an Adaptive Monte Carlo Localisation (AMCL)\cite{amcl} algorithm (is part of the ROS navigation stack - see navigation section) is used to localise the robot inside the known environment. It uses laser range finder readings to update a particle filter. Every particle is representing a specific discrete state and stores the uncertainty of robot being in that state/position within the known map. Also every time the robot moves uses the motor information to shift the particles to the corresponding direction. The robot's pose estimate is then been published through a ROS topic for use with other nodes.
 
 \subsection{Navigation}
 For navigation and obstacle avoidance, ROS navigation stack is used. It is a proven robust solution for domestic environments (citation here of marathon). More specifically navigation stack reads the odometry, the pose estimate and laser range finder scans from the relevant topics and drives safety the robot inside the environment to some goal. The goal is represented by some given coordinates. For example it drives the robot to the door coordinates, where the robot should perform its face recognition to the person ringing the bell. For achiving this it make use of a global and a local planer. The global planner creates an optimal global path based on robot's pose and a global costmap. Then a local planner, making use of the Dynamic Window Approach algorithm (citation here), is responsible for following that global path and reactively avoiding obstacles.
 
 \subsection{Mixed initiative controller and teleoperation}
-These nodes were made as part of another project involving mixed initiative Human-Robot Interaction (HRI) in emergency response robots. Thus, the name is not representative of their exact functionality in this case. The controller it is used to decide which velocity commands to give to the motors whenever some coupling of commands is needed. On one hand are the motor commands coming from robot's AI (e.g. AI navigation) and on the other hand are motor commands coming from a teleoperation node and a human through a joystick. Although the robot is autonomous, the latter is necessary as the user needs to place the robot in the initial state, move it around during testing just by pausing AI commands, or stop the robot in the case of an emergency (e.g. robot repeatedly hitting a wall, so the user has to stop it and drive it away).  This is another example of code which can be reused in many different applications.
+These nodes were made as part of another project involving mixed initiative HRI in emergency response robots. Thus, the name is not representative of their exact functionality in this case. The controller it is used to decide which velocity commands to give to the motors whenever some coupling of commands is needed. On one hand are the motor commands coming from robot's AI (e.g. AI navigation) and on the other hand are motor commands coming from a teleoperation node and a human through a joystick. Although the robot is autonomous, the latter is necessary as the user needs to place the robot in the initial state, move it around during testing just by pausing AI commands, or stop the robot in the case of an emergency (e.g. robot repeatedly hitting a wall, so the user has to stop it and drive it away).  This is another example of code which can be reused in many different applications.
 
 \subsection{Dora navigation goals node}
-\subsection{Face recognition}
+
+\subsection{Face detection and recognition}
+In order to improve the HRI skills of the robot we have implemented in our system face detection and face recognition capabilities (see FIG.\ref{fig:face}). The first one is used to find candidate face patterns inside an image, while the latter tries to find the best match of a new face with a known dataset.
+
+Face detection is performed using the Viola-Jones algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers which are applied incrementally in different regions of the image in order to discriminate candidate face regions. One of these feature classifiers won't identify a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
+
+Face recognition is performed by applying a Local Binary Pattern Histogram (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}.  The principle is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, divide the formed LBP image into m local regions and extract the histogram from each. Finally, classification is performed by comparing the resulting histograms with the ones of the classes in the dataset.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.in]{BARC_FaceRec.png}
+\caption{An example of the face detection and face recognition algorithms. The red bounding boxes surround the successfully detected faces, while each of them is given a corresponding identification code.}
+\label{fig:face}
+\end{figure}
+
 \subsection{Transformations}
 
 \section{Future work}
@@ -660,10 +612,6 @@ If three our members will be accepted to participate in the RoCKIn camp, we assu
 
 
 
-
-
-
-
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
@@ -679,9 +627,10 @@ If three our members will be accepted to participate in the RoCKIn camp, we assu
 % http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{./ref}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
@@ -690,7 +639,7 @@ If three our members will be accepted to participate in the RoCKIn camp, we assu
 
 %\bibitem{IEEEhowto:kopka}
 %H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 
 %\end{thebibliography}
 
