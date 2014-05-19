@@ -450,7 +450,9 @@ He started his PhD studies five months ago, thus he has not yet specified his re
 
 Semantic mapping can be conceived as an extension of a mapping problem in robotics \cite{Nuchter08_TowardsSemanticMaps}. Traditional maps take in consideration a spatial shape of an environment for motion planning purposes (e.g. navigation, localization). But generally, the environment has a more complex structure. Therefore, the role of semantic maps is to add concrete descriptions of components of the environment, their structure and relations. The robot can reason about the scene (e.g. planning, prediction, explanation, interpretation) using this descriptions in semantic map.
 
-Activity recognition. Service robots should share scenarios with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot need to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. The goal of activity recognition is to be able of building representations of activity from observations; specially interesting are qualitative spatio-temporal representations of activity, because they are more human alike and they can be used in general cases.
+Activity recognition can be useful in service robotics, where robots should share scenarios with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot need to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. 
+%I dont understand previous sentence (after i.e)
+The goal of activity recognition is to be able to build representations of an activity from observations; specially interesting are qualitative spatio-temporal representations of an activity, because they are more human alike and they can be used in general cases.
 
 \subsection{Manolis Chiou}
 
@@ -477,19 +479,20 @@ The robot was trained by taking many pictures of the environment, along with loc
 
 Another potential use of this project is to provide an initial location estimate to a laser based localisation system in order to allow the robot to quickly localise from any position without any human input.
 
-This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. As a robot was moving in the crowd One of the key failure points was if the robot became de-localised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
+This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. As a robot was moving in the crowd, one of the key failure points was if the robot became de-localised. Visual localisation developed in his final year project overcomes this issue.
 
 \section{\label{sec:hardware}Hardware}
-%TODO change it and enlarge it
 %from rules: Description of the hardware, including an image of the robot(s)
-The robot Dora (a pioneer robot) was kindly given for the team's needs. Furthermore, team members have access to different sensors such as laser scanners and depth cameras. At the moment Dora has no manipulator arm installed. In the future it is planned to mount one small manipulator arm in order to extent Dora's capabilities and allow for participation in more challenging scenarios in future competitions.
+The robot Dora (a pioneer robot) was kindly given for the team's needs, see Fig.\ref{fig:dora}. She is constructed from a Pioneer 3D-X robotic platform with a Hokuyo laser scanner in the front. Moreover, a pan-tilt unit carrying a Kinect depth camera and one RGB camera
+%TODO type?
+is mounted on the higher platform in order to get snapshot from cameras from better views than just place it on the Pioneer robot. Dora has also a travel luggage kit, thus it is possible to take her to the competition.
 
-Dora robot (see Fig.\ref{fig:dora}) is a Pioneer 3D-X robotic platform with a Hokuyo laser scanner in the front and a Kinect depth camera mounted on a pan-tilt unit. It is placed on the stick to get snapshot from better heigh than just place it on the Pioneer robot. Dora has also a travel luggage kit, thus it is possible to take her to the competition.
+Furthermore, team members have access to different sensors such as laser scanners, depth and RGB cameras. At the moment, Dora has no manipulator arm installed. In the future, it is planned to mount one small manipulator arm in order to extent Dora's capabilities.
 
-
+%TODO better picture of Dora
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.in]{dorafinal.jpg}
+\includegraphics[width=2.in]{dorafinal.jpg}
 \caption{Dora robot}
 \label{fig:dora}
 \end{figure}

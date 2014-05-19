@@ -27,6 +27,18 @@ IRLab, \emph{Intelligent Robotics Lab (IRLab), School of Computer Science,
   \url{http://www.cs.bham.ac.uk/research/groupings/robotics/}, accessed May
   2014.
 
+\bibitem{cmu}
+``{CMU Sphinx- Open Source Toolkit For Speech Recognition},''
+  \url{http://cmusphinx.sourceforge.net}.
+
+\bibitem{strands}
+``{STRANDS - Spatio-Temporal Representation and Activities for Cognitive
+  Control in Long-term Scenarios},'' \url{(http://strands-project.eu/)}.
+
+\bibitem{cogx}
+``{CogX - Cognitive Systems that Self-Understand and Self-Extend},''
+  \url{http://cogx.eu}.
+
 \bibitem{Nuchter08_TowardsSemanticMaps}
 A.~N\"{u}chter and J.~Hertzberg, ``Towards semantic maps for mobile robots,''
   \emph{Robot. Auton. Syst.}, vol.~56, no.~11, pp. 915--926, 2008.
