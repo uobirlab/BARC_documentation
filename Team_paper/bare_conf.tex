@@ -385,6 +385,13 @@ The team has the support of the Intelligent Robotics Lab \cite{irlab} in the sch
 %(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
 We summarise in this section three different challenges provided in the RoCKIN@home 2014 competition and it is explained, what we intend to perform with our robot this year. Our intention is to prepare a complete robotic platform, which will integrate the state of the art of areas, in which we do not have too much experiences, with our own research. Therefore, we would like to aim for high reusability of our robotic system. 
 
+\begin{figure*}[!htb]
+\centering
+\includegraphics[width=\textwidth]{timetable.png}
+\caption{Timetable}
+\label{fig:plan}
+\end{figure*}
+
 \subsection{Catering for Granny Annie’s Comfort}
 
 A robot will receive requirements from Granny Annie. These requirements may contain a cooperation with an intelligent flat or bringing to her a specific object. We would like to prepare our robot, that it can perform the first part - cooperation with intelligent flat. This subtask still contain interesting challenges to us, such as robust speech recognition and robot navigation in the way that it is comfortable and natural for a human. Of course, the communication with a flat's server must be working, but we do not expect too much difficulties in that. 
@@ -397,7 +404,20 @@ The second part of this task - bringing a specific object - is even more challen
 
 \subsection{Welcoming visitors}
 
+In this task, a robot should welcome visitors, recognized them and accompany them to a specific place in Granny's flat. Several areas are needed in this task : computer vision for face recognition (in case of known person Dr. Kimbley) and for an uniform detection (in case of Deli-man). Moreover, machine learning techniques are needed to be able to learn these two patterns before in order to recognize them. A robot can also benefit from speech recognition, if face/uniform recognition does not provide certain decision. Finally, a robot must have robust navigation in an environment in order to accompany person to specific place. 
 
+In our team, we agreed to start with this task, because of our expertise. We have already prepared a robotic system, which is able to recognize faces based on OpenCV (for details see Section \ref{sec:vision}) and robustly navigate in a known environment (see Section \ref{sec:navig}). As a next step, we will work on an uniform detection. Again, we might take a benefit from expertise within STRANDS project, where a robot also must recognize different types of uniforms. If we found more team members, we would like to improve robot's behaviour. For example, it will recognize if a person follows it and perform actions to ensure this. 
+
+\subsection{Getting to know my home}
+
+A robot should recognize changes in a flat in this scenario, which can be done autonomously or by cooperation with a human. We assume that our robot will be able to recognize a state of doors autonomously. It will combine measurements taken by a laser scanner and a Kinect. We have experiences with such a problem, thus we will only integrate the solution to our robotic system. 
+
+In order to automatically recognize changes in position of furniture or objects, we might take benefit of cooperation with STRANDS project again, as this is one of challenges being solved there. However, we also might combine it with cooperation with a human, where he/she will guide a robot to the object, which position has changed. We have already prepared a system to be able to follow a person. Moreover, a former team member was working on a project, where a robot should recognize, where a human is pointing by his/her finger. We might take benefit of work, which has be done and enlarge it to fit our needs. 
+
+\subsection{Timetable}
+%TODO actual plan
+%TODO more infor here, separation to work packages?
+An expected plan of our activities can be seen in Fig. \ref{fig:plan}.
 
 
 \section{Team members}
@@ -477,12 +497,12 @@ Dora robot (see Fig.\ref{fig:dora}) is a Pioneer 3D-X robotic platform with a Ho
 \section{Software architecture}
 The system is composed of several independent programs/nodes and thus reusable parts of code with different functionality. The different nodes communicate between them by exchanging ROS messages and ROS actions \ref{fig:nodes}. The core element of our framework that binds the rest of the node/processes together is a state machine node. (needs heavy editing this part)
 
-\begin{figure}[!t]
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=4.in]{nodes.png}
+\includegraphics[width=\textwidth]{nodes.png}
 \caption{An overview of the software architecture and how the nodes are connected interact with each other}
 \label{fig:nodes}
-\end{figure}
+\end{figure*}
 
 \subsection{Middleware-Robot Operating System}
 Robot Operating System (ROS) (cite here) will be used as the middleware. ROS open source philosophy is powerful and allows code re-usability by different programmers. It allows us to use robust, state of the art or our own AI algorithms without worrying about how to write code for low level motor commands or sensor drivers. Even more important is the fact that can save valuable time that otherwise would be spend in merging different architectures or worrying of how different pieces of software would communicate with each other. Lastly, ROS was also chosen as it has become almost a standard choice for researchers and thus our lab has extensive hands on experience.
@@ -496,7 +516,7 @@ Since the map is it assumed to be known there is a need to build it before furth
 \subsection{Localising in a known map with adaptive Monte Carlo localisation}
 After the map is known and saved, an Adaptive Monte Carlo Localisation (AMCL)\cite{amcl} algorithm (is part of the ROS navigation stack - see navigation section) is used to localise the robot inside the known environment. It uses laser range finder readings to update a particle filter. Every particle is representing a specific discrete state and stores the uncertainty of robot being in that state/position within the known map. Also every time the robot moves uses the motor information to shift the particles to the corresponding direction. The robot's pose estimate is then been published through a ROS topic for use with other nodes.
 
-\subsection{Navigation}
+\subsection{\label{sec:navig}Navigation}
 For navigation and obstacle avoidance, ROS navigation stack is used. It is a proven robust solution for domestic environments (citation here of marathon). More specifically navigation stack reads the odometry, the pose estimate and laser range finder scans from the relevant topics and drives safety the robot inside the environment to some goal. The goal is represented by some given coordinates. For example it drives the robot to the door coordinates, where the robot should perform its face recognition to the person ringing the bell. For achiving this it make use of a global and a local planer. The global planner creates an optimal global path based on robot's pose and a global costmap. Then a local planner, making use of the Dynamic Window Approach algorithm (citation here), is responsible for following that global path and reactively avoiding obstacles.
 
 \subsection{Mixed initiative controller and teleoperation}
@@ -504,7 +524,7 @@ These nodes were made as part of another project involving mixed initiative HRI 
 
 \subsection{Dora navigation goals node}
 
-\subsection{Face detection and recognition}
+\subsection{\label{sec:vision}Face detection and recognition}
 In order to improve the HRI skills of the robot we have implemented in our system face detection and face recognition capabilities (see FIG.\ref{fig:face}). The first one is used to find candidate face patterns inside an image, while the latter tries to find the best match of a new face with a known dataset.
 
 Face detection is performed using the Viola-Jones algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers which are applied incrementally in different regions of the image in order to discriminate candidate face regions. One of these feature classifiers won't identify a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
