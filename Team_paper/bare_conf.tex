@@ -372,9 +372,9 @@ Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the
 
 BARC team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to get more knowledge about robotics and to work on real robotic platforms and projects. Students were familiarising themselves with the Robot Operating System (ROS), by using a variety of ROS libraries and packages. %Also, they had the chance to work with different robotics platforms.
 
-Several students involved in the team were solving more complicated projects, mainly useful to promote robotics during school's Open day. Such an example was a robot Waitress, that was accepting orders for drinks and was bringing them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating gestures of kids. An extra Kinect sensor was used to recognize children's gestures. In spite of these interesting projects a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produced any comprehensive work.
+Several students involved in the team were solving more complicated projects, mainly useful to promote robotics during school's Open day. Such an example was a robot Waitress, that was accepting orders for drinks and was bringing them to a person, who made the order. This robot had no manipulation, drinks were placed on the robot by a person. Another example can be a project with a Nao robot repeating gestures of kids. An extra Kinect sensor was used to recognize children's gestures in this project. In spite of these interesting projects a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produced any comprehensive work.
 
-This year, BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gain valuable knowledge while learning how to be responsible for their work.
+This year, BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotic competition. We would like to join RoCKIn@home 2014 competition because it provides an interesting challenge and will help progressing domestic and industrial robots research and applications. Moreover, the cooperation between students is necessary. As a result, students can learn how to work in a team, but still work on some challenging part alone and gain valuable knowledge while learning how to be responsible for their work.
 
 The team has the support of the Intelligent Robotics Lab \cite{irlab} in the school of Computer Science. The lab conducts research and has expertise in a variety of fields such as but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore the lab has strong links with the industry. 
 
@@ -383,7 +383,20 @@ The team has the support of the Intelligent Robotics Lab \cite{irlab} in the sch
 %from rules: Innovative technology (if any) TODO describe usage of STRANDS
 %from rules: Reusability of the system or parts thereof - see STRANDS
 %(I think we should mainly focus on re-usability and the chance to produce a complete robotic platform by on state of the art and proven AI for real world applications. )
-The team would like to join RoCKIn@Home competition, but the exact rules are not provided yet. Thus, we took a rules of the Robocup@Home challenge and we agree that we will focus on \textit{Follow me} and \textit{Cocktail party} tasks first. We discus the architecture of your system using the Dora robot, see Section %\ref{sec:dora}.
+We summarise in this section three different challenges provided in the RoCKIN@home 2014 competition and it is explained, what we intend to perform with our robot this year. Our intention is to prepare a complete robotic platform, which will integrate the state of the art of areas, in which we do not have too much experiences, with our own research. Therefore, we would like to aim for high reusability of our robotic system. 
+
+\subsection{Catering for Granny Annie’s Comfort}
+
+A robot will receive requirements from Granny Annie. These requirements may contain a cooperation with an intelligent flat or bringing to her a specific object. We would like to prepare our robot, that it can perform the first part - cooperation with intelligent flat. This subtask still contain interesting challenges to us, such as robust speech recognition and robot navigation in the way that it is comfortable and natural for a human. Of course, the communication with a flat's server must be working, but we do not expect too much difficulties in that. 
+
+A problem of speech recognition is often discussed within robotic community. It is definitely helpful for future robot's cooperation with human, but it also brings a lot of difficulties during competition. If we assume a robot working at Granny's flat, the robot can learn her specific voice and increases its performance over time. Moreover, Granny is living alone, thus, it can be assumed that a level of background noise is minimal. In contrast, the background noise is really high during competition because of audience watching a match. Moreover, the person playing Granny Annie changes, thus a robot cannot improve its behaviour. We do not assume to develop our system from scratch, rather we think to use CMU Sphinx - Open Source Toolkit For Speech Recognition \cite{cmu}. Moreover, we might cooperate with a group for Natural Language Processing within our school to improve behaviour of our system.
+
+In human approaching challenge, we expect to use the state-of-the-art systems again. However, we haven't yet done a proper search for approaches, which will suit us. We might use opportunity of closer cooperation with project STRANDS \cite{strands}, as our robotic group within our school leads this project. Especially, a cooperation with Christian Dondrup, the PhD student at the University of Lincoln, might be beneficial in this stage, as he is working on Human Robot Interaction.
+
+The second part of this task - bringing a specific object - is even more challenging as it includes two large robotics domain - computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only search for an object. Here, we might take benefit of experiences from previous project in our robotic group - CogX \cite{cogx}, where one of robot's performance was searching for known object, where it took into account different probabilities of object's presence in different rooms. However, this will still require a lot of effort for us, as the robot was not using ROS before and we will need to understand and integrate bits to our system. As a result, we are not sure if we will perform this part this year, as we have limited numbers of members in our team.
+
+\subsection{Welcoming visitors}
+
 
 
 
@@ -404,7 +417,7 @@ The robot needs to have a control framework that makes decisions concerning whic
 
 The assigned task might have some time constraints, for example release and due dates. Therefore, scheduling techniques are important to handle this. Each task has also defined goal or activity, which needs to be achieved or performed, respectively. This performance can be represented by state machine for well defined tasks. However, planning techniques are needed for more general tasks, for example finding of an object, which position varies  in a robot's environment.
 
-Her research is influenced by the EU STRANDS project (http://strands-project.eu/). "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." %TODO citation here
+Her research is influenced by the EU STRANDS project. "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." \cite{strands}
 Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
 
 \subsection{Marco Antonio Becerra Pedraza}
@@ -446,7 +459,7 @@ Another potential use of this project is to provide an initial location estimate
 
 This project follows on his Summer project working on a drinks serving robot for a launch event for the 2014 British Science Festival. As a robot was moving in the crowd One of the key failure points was if the robot became de-localised. It needs to know exactly where it is in order to effectively navigate through gaps in between crowds of people, but the crowds make this much more difficult. Visual localisation was considered as a potential solution but would have taken too long to implement.
 
-\section{Hardware}
+\section{\label{sec:hardware}Hardware}
 %TODO change it and enlarge it
 %from rules: Description of the hardware, including an image of the robot(s)
 The robot Dora (a pioneer robot) was kindly given for the team's needs. Furthermore, team members have access to different sensors such as laser scanners and depth cameras. At the moment Dora has no manipulator arm installed. In the future it is planned to mount one small manipulator arm in order to extent Dora's capabilities and allow for participation in more challenging scenarios in future competitions.
