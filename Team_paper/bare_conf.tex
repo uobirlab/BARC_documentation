@@ -498,20 +498,31 @@ Furthermore, team members have access to different sensors such as laser scanner
 \end{figure}
 
 \section{Software architecture}
-The system is composed of several independent programs/nodes and thus reusable parts of code with different functionality. The different nodes communicate between them by exchanging ROS messages and ROS actions \ref{fig:nodes}. The core element of our framework that binds the rest of the node/processes together is a state machine node. (needs heavy editing this part)
+
+As our goal is to achieve high re-usability, modularity and openness, we built our software architecture on Robot Operating System (ROS) middleware, using Hydro version \cite{ros}. ROS open source philosophy is powerful and allows code re-usability by different programmers. It allows us to use robust, state-of-the-art for subsystems, which are not in our research interest, such as localization, mapping, navigation around obstacles. We can even add our own AI algorithms without worrying how to access specific hardware on a robot, as standard drivers are provided by ROS for many hardware used in robotics. Even more important is the fact that it provides standardised way how to provide inputs/outputs of subsystem. As a result, it save valuable time during merging of different subsystems written by different users. Last but not least, ROS was also chosen as it has become almost a standard choice for researchers.
+%and thus our lab has extensive hands on experience.
+
+In order to fulfil \textit{Welcoming visitors} task, we have already developed some main components, such as face recognition and navigation. Moreover, we created a basic structure of our software system for this task, which links all used components/ROS nodes, see Fig. \ref{fig:nodes}. The different nodes communicate by exchanging ROS messages and by using ROS actions. 
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{nodes.png}
+\includegraphics[width=\textwidth]{nodes_cut.png}
 \caption{An overview of the software architecture and how the nodes are connected interact with each other}
 \label{fig:nodes}
 \end{figure*}
 
-\subsection{Middleware-Robot Operating System}
-Robot Operating System (ROS) (cite here) will be used as the middleware. ROS open source philosophy is powerful and allows code re-usability by different programmers. It allows us to use robust, state of the art or our own AI algorithms without worrying about how to write code for low level motor commands or sensor drivers. Even more important is the fact that can save valuable time that otherwise would be spend in merging different architectures or worrying of how different pieces of software would communicate with each other. Lastly, ROS was also chosen as it has become almost a standard choice for researchers and thus our lab has extensive hands on experience.
-
 \subsection{State machine}
-The core element of our framework that binds the rest of the node/processes together is a state machine node. It is responsible for monitoring the state of the robot and the world. Also it is responsible for deciding what is going to be the next robot action. It was developed with ROS SMACH framework and it works by....
+In this year, we are focused to tasks, which can be easily defined as a sequence of some actions. Therefore, we decided to use a state machine as the control structure of our components. A state machine should generally monitor the state of robot's components and switch between them according predefined rules. Thus, it is the core element of our robotic system that connects the rest of subsystems together.
+
+For creating a state machine, we use SMACH \cite{smach} package that is "a task-level architecture for rapidly creating complex robot behavior" and it is even ROS-independent. 
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=3.in]{state_machine.png}
+\caption{SMACH state machine connecting all subsystems to one robotic framework}
+\label{fig:nodes}
+\end{figure}
+
 
 \subsection{Building the map with SLAM}
 Since the map is it assumed to be known there is a need to build it before further tests can be done. For initially building a map we made use of the OpenSlam's GMapping algorithm \cite{slam} through the ROS wrapper package called slam gmapping. This approach uses a Rao-Blackwellized particle filter in which each particle carries an individual map of the environment.  The particles are updated by taking into account both odometry and the latests observations from a laser range finder.

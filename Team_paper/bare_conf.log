@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  19 MAY 2014 19:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  20 MAY 2014 12:30
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
@@ -124,7 +124,11 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-) (./bare_conf.aux)
+) (./bare_conf.aux
+
+LaTeX Warning: Label `fig:nodes' multiply defined.
+
+)
 \openout1 = `bare_conf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 287.
@@ -139,8 +143,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 287.
 LaTeX Font Info:    ... okay on input line 287.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 287.
 LaTeX Font Info:    ... okay on input line 287.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
 \scratchdimen=\dimen119
@@ -174,20 +177,17 @@ Missing character: There is no © in font ptmr7t!
  [3] <dorafinal.jpg, id=18, 228.855pt x 285.065pt>
 File: dorafinal.jpg Graphic file (type jpg)
 
-<use dorafinal.jpg>
-Underfull \hbox (badness 1371) in paragraph at lines 501--502
-[]\OT1/ptm/m/n/10 The sys-tem is com-posed of sev-eral in-de-pen-dent pro-
- []
+<use dorafinal.jpg> <nodes_cut.png, id=19, 2848.6425pt x 778.91pt>
+File: nodes_cut.png Graphic file (type png)
 
-<nodes.png, id=19, 3563.3125pt x 975.645pt>
-File: nodes.png Graphic file (type png)
- <use nodes.png> [4 <./dorafinal.jpg>] <BARC_FaceRec.png, id=23, 630.355pt x 41
-6.55624pt>
+<use nodes_cut.png> <state_machine.png, id=20, 554.07pt x 651.43375pt>
+File: state_machine.png Graphic file (type png)
+
+<use state_machine.png> [4 <./dorafinal.jpg>] [5 <./nodes_cut.png> <./state_mac
+hine.png>] <BARC_FaceRec.png, id=29, 630.355pt x 416.55624pt>
 File: BARC_FaceRec.png Graphic file (type png)
- <use BARC_FaceRec.png>
-Underfull \vbox (badness 4429) has occurred while \output is active []
 
- [5 <./nodes.png>] (./bare_conf.bbl
+<use BARC_FaceRec.png> (./bare_conf.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -206,25 +206,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[6 <./BARC_FaceRec.png>] (./bare_conf.aux)
 
- <./BARC_FaceRec.png>] (./bare_conf.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1816 strings out of 495061
- 27622 string characters out of 1182621
- 84698 words of memory out of 3000000
- 5015 multiletter control sequences out of 15000+50000
+ 1823 strings out of 495061
+ 27758 string characters out of 1182621
+ 84745 words of memory out of 3000000
+ 5021 multiletter control sequences out of 15000+50000
  35966 words of font info for 69 fonts, out of 3000000 for 9000
  31 hyphenation exceptions out of 8191
- 26i,8n,21p,929b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/d
-vips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></u
-sr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texl
-ive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 923040 bytes).
+ 26i,8n,21p,943b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
+imes/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (6 pages, 966110 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
