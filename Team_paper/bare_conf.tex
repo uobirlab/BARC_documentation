@@ -296,7 +296,8 @@
 % affiliations
 \author{\IEEEauthorblockN{Lenka Mudrova, Marco Becerra, Manolis Chiou, Sean Bastable}
 \IEEEauthorblockA{
-School of Computer Science, University of Birmingham, UK}
+School of Computer Science, University of Birmingham, UK\\
+website: \textit{http://www.cs.bham.ac.uk/$\sim$lxm210/barc.html}}
 %\and
 %\IEEEauthorblockN{Ashish Kumar}
 %\IEEEauthorblockA{axk380@cs.bham.ac.uk}
@@ -339,9 +340,9 @@ School of Computer Science, University of Birmingham, UK}
 
 \begin{abstract}
 %\boldmath
-Robotic competitions provide an excellent opportunity for students to use their knowledge and skills from formal lectures and research to real world challenging scenarios. Moreover, they can influence and promote robotics to the public. Experience and knowledge gained from these events pushes research into progressing faster and benefits the robotics community.
+%Robotic competitions provide an excellent opportunity for students to use their knowledge and skills from formal lectures and research to real world challenging scenarios. Moreover, they can influence and promote robotics to the public. Experience and knowledge gained from these events pushes research into progressing faster and benefits the robotics community.
 
-Birmingham Autonomous Robot Club (BARC) aims in connecting the students from the School of Computer Science, University of Birmingham, with strong motivation in robotic applications and competitions. This paper is part of our application for participating in the RoCKIn 2014 competition. It provides an overview of our team, including team members, description of their research interests and previous experiences. Also, it provides information on the team's robot and the hardware that will be used. Lastly, it is described in detail how the competition's tasks will be tackled by the team and the software implementation/architecture that is currently used.
+Birmingham Autonomous Robot Club (BARC) connects students from the School of Computer Science, University of Birmingham, with strong motivation in robotic applications and competitions. This paper is part of our application for participating in the RoCKIn@Home 2014 competition. It overviews how this challenge relates to our interest and experiences and how we can achieve high reusability of our system by integrating different subsystems from other projects. Moreover, team members, their experiences and research interests are described more in detail. This is followed by introducing our robot, its hardware and capabilities. Intended software structure is also described here, followed by explanation of the first draft of robotic system, which fulfils a part of \textit{Welcoming task}. Finally, the conclusion summarises our motivation and relevance for this competition.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -417,6 +418,11 @@ In order to automatically recognize changes in position of furniture or objects,
 \subsection{Timetable}
 %TODO actual plan
 %TODO more infor here, separation to work packages?
+%TODO check the link to video
+We decided to split tasks for the competition to more milestones:
+\begin{itemize}
+\item Welcoming task - recognising a known person, robust navigation in a known flat. The output can be seen on our video \textsf{http://youtu.be/KjySzrGCXmM}.
+\end{itemize}
 An expected plan of our activities can be seen in Fig. \ref{fig:plan}.
 
 
@@ -437,7 +443,7 @@ The robot needs to have a control framework that makes decisions concerning whic
 
 The assigned task might have some time constraints, for example release and due dates. Therefore, scheduling techniques are important to handle this. Each task has also defined goal or activity, which needs to be achieved or performed, respectively. This performance can be represented by state machine for well defined tasks. However, planning techniques are needed for more general tasks, for example finding of an object, which position varies  in a robot's environment.
 
-Her research is influenced by the EU STRANDS project. "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." \cite{strands}
+Her research is influenced by the EU STRANDS project. ``STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project)." \cite{strands}
 Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
 
 \subsection{Marco Antonio Becerra Pedraza}
@@ -514,36 +520,53 @@ In order to fulfil \textit{Welcoming visitors} task, we have already developed s
 \subsection{State machine}
 In this year, we are focused to tasks, which can be easily defined as a sequence of some actions. Therefore, we decided to use a state machine as the control structure of our components. A state machine should generally monitor the state of robot's components and switch between them according predefined rules. Thus, it is the core element of our robotic system that connects the rest of subsystems together.
 
-For creating a state machine, we use SMACH \cite{smach} package that is "a task-level architecture for rapidly creating complex robot behavior" and it is even ROS-independent. 
+For creating a state machine, we use SMACH package that is ``a task-level architecture for rapidly creating complex robot behavior" \cite{smach}. Our state machine can be seen in Fig. \ref{fig:smach} and it connect these nodes:
+\begin{itemize}
+\item Teleop - In order to perform \textit{Welcoming visitors}, a robot need to recognize that someone is using doorbell. This can be done by cooperating with an intelligent flat or by recognizing of a specific sound. However, we have not yet prepare any of these approaches. Therefore, we use a joystick just as simulation of pressed doorbell. 
+The second functionality of this state is to inform the robot, that Doctor has finished his work in Granny's bedroom. This state is only temporal, we will replace it by recognition of pressed doorbell and speech recognition for receiving a command from Doctor, respectively.
+\item Navigate to a place - These states are sending commands to a navigation goal (see Section \ref{sec:navig}). Now, we predefined the places in an existing map. However, we intend to enlarge this in order that the robot will be able to find another correct position, if a predefined place is occupied.
+\item Speech sentence - These states are sending a command with predefined sentence to synthetic speech node in order to have better human interaction.
+\item Face recognition - This state run a node to detect a person in front of doors, see Section \ref{sec:vision}.
+\end{itemize}
+
+Besides these nodes used in the state machine, we need more functionalities as building of a map, localisation, emergency stop and learning of a face of Doctor. These and previous nodes are more described below.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=3.in]{state_machine.png}
 \caption{SMACH state machine connecting all subsystems to one robotic framework}
-\label{fig:nodes}
+\label{fig:smach}
 \end{figure}
 
 
-\subsection{Building the map with SLAM}
-Since the map is it assumed to be known there is a need to build it before further tests can be done. For initially building a map we made use of the OpenSlam's GMapping algorithm \cite{slam} through the ROS wrapper package called slam gmapping. This approach uses a Rao-Blackwellized particle filter in which each particle carries an individual map of the environment.  The particles are updated by taking into account both odometry and the latests observations from a laser range finder.
+\subsection{Building a map with SLAM}
+By competition rules, it is assumed that a robot can used a known map. In order to be able to create a map of a robot's environment, we used the \textit{OpenSlam's GMapping} algorithm \cite{slam} through the ROS wrapper package called \textsf{slam gmapping}. This approach uses a Rao-Blackwellized particle filter, in which each particle carries an individual map of the environment.  The particles are updated by taking into account both odometry and the latests observations from a laser range finder.
 
 \subsection{Localising in a known map with adaptive Monte Carlo localisation}
-After the map is known and saved, an Adaptive Monte Carlo Localisation (AMCL)\cite{amcl} algorithm (is part of the ROS navigation stack - see navigation section) is used to localise the robot inside the known environment. It uses laser range finder readings to update a particle filter. Every particle is representing a specific discrete state and stores the uncertainty of robot being in that state/position within the known map. Also every time the robot moves uses the motor information to shift the particles to the corresponding direction. The robot's pose estimate is then been published through a ROS topic for use with other nodes.
+After the map is known and saved, an \textit{Adaptive Monte Carlo Localisation} (AMCL) algorithm \cite{amcl} is used to localise the robot inside the known environment. This node is part of the ROS \textsf{navigation stack} package, for details see section below. 
+This algorithm uses laser range finder readings to update a particle filter. Every particle is representing a specific discrete state and stores an uncertainty of robot's being in that state/position within the known map. It also uses the motor information to shift the particles to the corresponding direction every time the robot moves. 
+%The robot's pose estimate is then been published through a ROS topic for use with other nodes.
 
 \subsection{\label{sec:navig}Navigation}
-For navigation and obstacle avoidance, ROS navigation stack is used. It is a proven robust solution for domestic environments (citation here of marathon). More specifically navigation stack reads the odometry, the pose estimate and laser range finder scans from the relevant topics and drives safety the robot inside the environment to some goal. The goal is represented by some given coordinates. For example it drives the robot to the door coordinates, where the robot should perform its face recognition to the person ringing the bell. For achiving this it make use of a global and a local planer. The global planner creates an optimal global path based on robot's pose and a global costmap. Then a local planner, making use of the Dynamic Window Approach algorithm (citation here), is responsible for following that global path and reactively avoiding obstacles.
+%TODO (citation here of marathon)?
+For navigation and robust obstacle avoidance, ROS \textsf{navigation stack} package is used. In detail, this node reads the robot's odometry, the estimation of robot's pose and laser range finder scans from relevant topics and based on these information, it drives safely the robot in the environment to a predefined goal. In order to navigate smoothly, it uses a combination of a global and a local planer. The global planner creates an optimal global path based on robot's pose and a global costmap. Then a local planner, which uses the \textit{Dynamic Window Approach algorithm}, is responsible for following the global path and reactively avoiding obstacles.
 
 \subsection{Mixed initiative controller and teleoperation}
-These nodes were made as part of another project involving mixed initiative HRI in emergency response robots. Thus, the name is not representative of their exact functionality in this case. The controller it is used to decide which velocity commands to give to the motors whenever some coupling of commands is needed. On one hand are the motor commands coming from robot's AI (e.g. AI navigation) and on the other hand are motor commands coming from a teleoperation node and a human through a joystick. Although the robot is autonomous, the latter is necessary as the user needs to place the robot in the initial state, move it around during testing just by pausing AI commands, or stop the robot in the case of an emergency (e.g. robot repeatedly hitting a wall, so the user has to stop it and drive it away).  This is another example of code which can be reused in many different applications.
+% These nodes were made as part of an another project involving mixed initiative HRI in emergency response robots. Thus, the name is not representative of their exact functionality in this case. The controller is used to decide, which velocity commands to give to the motors whenever some coupling of commands is needed. On one hand, the motor commands are coming from robot's AI (e.g. AI navigation) and on the other hand are motor commands coming from a teleoperation node and a human through a joystick. Although the robot is autonomous, the latter is necessary as the user needs to place the robot in the initial state, move it around during testing just by pausing AI commands, or stop the robot in the case of an emergency (e.g. robot repeatedly hitting a wall, so the user has to stop it and drive it away).  This is another example of code which can be reused in many different applications.
 
-\subsection{Dora navigation goals node}
+These nodes were made as part of an another project involving mixed initiative HRI in emergency response robots. They allow to switch between autonomous behaviour of a robot and teleoperation. Of course, this will not be used during competition, but it is really helpful functionality during testing, when we can easily pause a robot behaviour or set up a robot in its environment. Moreover, it provides remote emergency stop, which increase safety of our robot.
+
 
 \subsection{\label{sec:vision}Face detection and recognition}
-In order to improve the HRI skills of the robot we have implemented in our system face detection and face recognition capabilities (see FIG.\ref{fig:face}). The first one is used to find candidate face patterns inside an image, while the latter tries to find the best match of a new face with a known dataset.
 
-Face detection is performed using the Viola-Jones algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers which are applied incrementally in different regions of the image in order to discriminate candidate face regions. One of these feature classifiers won't identify a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
+%In order to improve the HRI skills of the robot we have implemented in our system face detection and face recognition capabilities (see FIG.\ref{fig:face}).
+In order to be able to recognise a person standing in front of the entrance doors, we implemented a system containing face detection, which is used to find candidate face patterns inside an image, and face recognition, which finds the best match of a detected face with a known dataset, see Fig. \ref{fig:face}.
 
-Face recognition is performed by applying a Local Binary Pattern Histogram (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}.  The principle is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, divide the formed LBP image into m local regions and extract the histogram from each. Finally, classification is performed by comparing the resulting histograms with the ones of the classes in the dataset.
+Face detection is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers, which are applied incrementally in different regions of the image in order to discriminate candidate face regions. 
+%TODO I (Lenka) dont understand the following sentence. I think it is not necessary there
+%One of these feature classifiers will not identify a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
+
+Face recognition is performed by applying a \textit{Local Binary Pattern Histogram} (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}. The principle of this algorithm is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, it divides the formed LBP image into $m$ local regions and extracts the histogram from each. Finally, classification is performed by comparing the resulting histograms with the dataset.
 
 \begin{figure}[!t]
 \centering
@@ -551,12 +574,6 @@ Face recognition is performed by applying a Local Binary Pattern Histogram (LBPH
 \caption{An example of the face detection and face recognition algorithms. The red bounding boxes surround the successfully detected faces, while each of them is given a corresponding identification code.}
 \label{fig:face}
 \end{figure}
-
-\subsection{Transformations}
-
-\section{Future work}
-%and maybe enlargements?
-%from rules: Applicability and relevance to domestic/industrial robotics [@Home / @Work]
 
 
 % An example of a floating figure using the graphicx package.
@@ -644,9 +661,11 @@ Face recognition is performed by applying a Local Binary Pattern Histogram (LBPH
 
 
 \section{Conclusion}
-All team members have a strong motivation in participating in the robotic competitions. We think that the RoCKIn@Home will provide interesting challenge for us and it will address the problematic of the real robots in our homes. As a result, we are expecting to obtain more knowledge in the ongoing research in many fields in robotic.
+%from rules: Applicability and relevance to domestic/industrial robotics [@Home / @Work]
+All team members have research interest in areas, where a robot must cooperate with people in order to provide the best performance. To summarize, Lenka is working on STRANDS project, which aim to developed robots capable of helping elderly people with every day activities, Marco is interested in activity recognition, which can significantly improve the cooperation of robots and humans. Manolis is doing research on flexible robotic control via co-operation between an human and an autonomous robot, especially in difficult environments for a robot. Sean did his bachelor project on robot localization in human crowds. Therefore, we believe that our work is strongly relevant to the RoCKIn@Home challenge.
 
-If three our members will be accepted to participate in the RoCKIn camp, we assumed this will help us to get into the demanding robotic topics more faster and produce better and more interesting solution of the overall system.
+Moreover, if our team participates in this challenge, it will be interesting challenge especially to newly income members, as we are expecting more first year bachelor students will join the team in summer. We believe that participating in RoCKIn@Home challenge will bring a lot of experiences not only to the young students, but also to us. As a result, we are expecting to obtain more knowledge in the ongoing research in many fields in robotics.
+
 
 
 

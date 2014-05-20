@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  20 MAY 2014 12:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  20 MAY 2014 17:50
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
@@ -124,11 +124,7 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-) (./bare_conf.aux
-
-LaTeX Warning: Label `fig:nodes' multiply defined.
-
-)
+) (./bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 287.
@@ -143,7 +139,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 287.
 LaTeX Font Info:    ... okay on input line 287.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 287.
 LaTeX Font Info:    ... okay on input line 287.
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
 \scratchdimen=\dimen119
@@ -155,7 +152,12 @@ LaTeX Font Info:    ... okay on input line 287.
 \MPscratchDim=\dimen120
 \MPnumerator=\count97
 \everyMPtoPDFconversion=\toks17
-) <timetable.png, id=1, 871.255pt x 131.49126pt>
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 339.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 339.
+ <timetable.png, id=1, 871.255pt x 131.49126pt>
 File: timetable.png Graphic file (type png)
  <use timetable.png>
 Missing character: There is no â in font ptmri7t!
@@ -165,35 +167,37 @@ Missing character: There is no ™ in font ptmri7t!
 
 
 ]
-Underfull \vbox (badness 2799) has occurred while \output is active []
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 424.
 
- [2 <./timetable.png>]
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+) [2 <./timetable.png>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
- [3] <dorafinal.jpg, id=18, 228.855pt x 285.065pt>
+
+[3] <dorafinal.jpg, id=21, 228.855pt x 285.065pt>
 File: dorafinal.jpg Graphic file (type jpg)
-
-<use dorafinal.jpg> <nodes_cut.png, id=19, 2848.6425pt x 778.91pt>
+ <use dorafinal.jpg>
+<nodes_cut.png, id=22, 2848.6425pt x 778.91pt>
 File: nodes_cut.png Graphic file (type png)
-
-<use nodes_cut.png> <state_machine.png, id=20, 554.07pt x 651.43375pt>
+ <use nodes_cut.png> [4 <./dorafinal.jpg>] <state_machine.png, id=26, 554.07pt 
+x 651.43375pt>
 File: state_machine.png Graphic file (type png)
 
-<use state_machine.png> [4 <./dorafinal.jpg>] [5 <./nodes_cut.png> <./state_mac
-hine.png>] <BARC_FaceRec.png, id=29, 630.355pt x 416.55624pt>
+<use state_machine.png> [5 <./nodes_cut.png> <./state_machine.png>]
+<BARC_FaceRec.png, id=32, 630.355pt x 416.55624pt>
 File: BARC_FaceRec.png Graphic file (type png)
-
-<use BARC_FaceRec.png> (./bare_conf.bbl
+ <use BARC_FaceRec.png>
+(./bare_conf.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 27.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 27.
 )
 
 ** Conference Paper **
@@ -206,26 +210,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6 <./BARC_FaceRec.png>] (./bare_conf.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[6 <./BARC_FaceRec.png>] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 1823 strings out of 495061
- 27758 string characters out of 1182621
- 84745 words of memory out of 3000000
- 5021 multiletter control sequences out of 15000+50000
- 35966 words of font info for 69 fonts, out of 3000000 for 9000
+ 1878 strings out of 495061
+ 28489 string characters out of 1182621
+ 84714 words of memory out of 3000000
+ 5071 multiletter control sequences out of 15000+50000
+ 37726 words of font info for 71 fonts, out of 3000000 for 9000
  31 hyphenation exceptions out of 8191
- 26i,8n,21p,943b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
-imes/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></u
-sr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 966110 bytes).
+ 26i,8n,21p,943b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc
+/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
+mf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb
+i8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (6 pages, 999726 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
