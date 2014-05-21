@@ -395,13 +395,12 @@ This section summarizes three different RoCKIN@home 2014 competition challenges 
 
 A robot will receive requirements from Granny Annie. These requirements may contain interaction with an intelligent flat or bringing to her a specific object. We would like to prepare our robot, that it can perform the first part - cooperation/interaction with intelligent flat. This subtask still contains interesting challenges, such as robust speech recognition and robot navigation in the way that it is comfortable and natural for a human. %Of course, the communication with a flat's server mustbe working, but we do not expect too much difficulties in that. 
 
-The problem of speech recognition is often being discussed within the robotic community. It is something necessary for the future robots when cooperate with humans. During competition speech recognition provides a lot of challenges. Assuming a robot working at Granny's flat, the robot can learn and adapt to her voice, something that increases its performance over time. Moreover, Granny is living alone, thus, it can be assumed that the level of background noise is minimal. In contrast, the background noise is really high during competition because of the spectators. Furthermore, the person playing Granny Annie changes, hence a robot cannot improve its behaviour. We do not plan to develop our system from scratch, rather we think to use CMU Sphinx - Open Source Toolkit For Speech Recognition \cite{cmu}. %TODO always papers instead of links.
+The problem of speech recognition is often being discussed within the robotic community. It is something necessary for the future robots when cooperate with humans. During competition speech recognition provides a lot of challenges. Assuming a robot working at Granny's flat, the robot can learn and adapt to her voice, something that increases its performance over time. Moreover, Granny is living alone, thus, it can be assumed that the level of background noise is minimal. In contrast, the background noise is really high during competition because of the spectators. Furthermore, the person playing Granny Annie changes, hence a robot cannot improve its behaviour. We do not plan to develop our system from scratch, rather we think to use CMU Sphinx - Open Source Toolkit For Speech Recognition \cite{cmu}. %TODO Manolis always papers instead of links.
 Moreover, we might cooperate with a Natural Language Processing group within our school to improve system's behaviour.
 
-In human approaching challenge,%TODO we aim to use a state-of-the-art approach. %TODO Doesnt sound good: However, we haven't yet done a proper search for approaches, which will suit us. 
-we will use the opportunity for closer cooperation with the STRANDS \cite{strands} project, as our robotic group within our school leads this project. Especially, a cooperation with Christian Dondrup, the PhD student at the University of Lincoln, might be beneficial in this stage, as he is working on Human Robot Interaction.
+In human approaching challenge, we will use the opportunity for closer cooperation with the STRANDS \cite{strands} project, as our robotic group within our school leads this project. Especially, a cooperation with Christian Dondrup, the PhD student at the University of Lincoln, might be beneficial in this stage, as he is working on Human Robot Interaction.
 
-The second part of this task - bringing a specific object - is even more challenging as it includes two large robotic domains, computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only object search. We will benefit from experiences from a previous project in our robotic group - CogX \cite{cogx}. In this project, one of the robot's abilities was to search for known objects, by taking into account common sense knowledge (i.e. prior knowledge) in the form of probabilities of object's presence in different rooms. However, this will still require a lot of effort from us, as the robot was not using ROS before and we will need to understand and integrate bits to our system. %TODO As a result, it is still not certain if we will perform this part this year, as we have limited numbers of members in our team. <-- doesnt sound very well
+The second part of this task - bringing a specific object - is even more challenging as it includes two large robotic domains, computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only object search. We will benefit from experiences from a previous project in our robotic group - CogX \cite{cogx}. In this project, one of the robot's abilities was to search for known objects, by taking into account common sense knowledge (i.e. prior knowledge) in the form of probabilities of object's presence in different rooms. However, this will still require a lot of effort from us, as the robot was not using ROS before and we will need to understand and integrate bits to our system. 
 
 \subsection{Welcoming visitors}
 
@@ -421,7 +420,7 @@ In order to automatically recognize changes in position of furniture or objects,
 %TODO check the link to video
 We decided to split tasks for the competition to more milestones:
 \begin{itemize}
-\item Welcoming task - recognising a known person, robust navigation in a known flat. The output can be seen on our video \textsf{http://youtu.be/KjySzrGCXmM}.
+\item Welcoming task - recognising a known person, robust navigation in a known flat. 
 \end{itemize}
 An expected plan of our activities can be seen in Fig. \ref{fig:plan}.
 
@@ -489,9 +488,7 @@ This project follows on his previous summer project of a drinks serving robot us
 
 \section{\label{sec:hardware}Hardware}
 %from rules: Description of the hardware, including an image of the robot(s)
-The robot Dora was kindly given for the team's needs, see Fig.\ref{fig:dora}. She is constructed from a Pioneer 3D-X robotic platform with a Hokuyo laser scanner in the front. Moreover, a pan-tilt unit carrying a Kinect depth camera and one RGB camera
-%TODO type?
-are mounted on the higher point of the platform in order to get snapshots from better views than just place it on the Pioneer robot. Dora has also a travel luggage kit, thus it is possible to take her to the competition.
+The robot Dora was kindly given for the team's needs, see Fig.\ref{fig:dora}. She is constructed from a Pioneer 3D-X, which is differential robotic platform with a Hokuyo laser scanner in the front. Moreover, a pan-tilt unit carrying a Kinect depth camera and one RGB camera are mounted on the higher point of the platform in order to get snapshots from better views than just place it on the Pioneer robot. Dora has also a travel luggage kit, thus it is possible to take her to the competition.
 
 Furthermore, team members have access to different sensors such as laser scanners, depth and RGB cameras. At the moment, Dora has no manipulator arm installed. In the future, it is planned to mount one small manipulator arm in order to extent Dora's capabilities.
 
@@ -555,7 +552,7 @@ These nodes were made as part of another project involving mixed initiative HRI 
 In order to be able to recognise a person standing in front of the entrance, the system implements face detection, which is used to find candidate face patterns inside an image, and face recognition, which finds the best match of a detected face with a known dataset, see Fig. \ref{fig:face}.
 
 Face detection is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers which are applied incrementally in different regions of the image in order to discriminate candidate face regions.
-%TODO I (Lenka) dont understand the following sentence. I think it is not necessary there
+%TODO Marco
 % One of these feature classifiers is not capable of identifying a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
 
 Face recognition is performed by applying a \textit{Local Binary Pattern Histogram} (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}. The principle of this algorithm is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, it divides the formed LBP image into $m$ local regions and extracts the histogram from each. Finally, classification is performed by comparing the resulting histograms with the dataset.%TODO need to ask MARCO
@@ -653,6 +650,7 @@ Face recognition is performed by applying a \textit{Local Binary Pattern Histogr
 \section{Conclusion}
 %TODO proof reading
 %from rules: Applicability and relevance to domestic/industrial robotics [@Home / @Work]
+%Lenka
 All team members have research interest in areas, where a robot must cooperate with people in order to provide the best performance. To summarize, Lenka is working on STRANDS project, which aim to developed robots capable of helping elderly people with every day activities, Marco is interested in activity recognition, which can significantly improve the cooperation of robots and humans. Manolis is doing research on flexible robotic control via co-operation between an human and an autonomous robot, especially in difficult environments for a robot. Sean did his bachelor project on robot localization in human crowds. Therefore, we believe that our work is strongly relevant to the RoCKIn@Home challenge.
 
 Moreover, if our team participates in this challenge, it will be interesting challenge especially to newly income members, as we are expecting more first year bachelor students will join the team in summer. We believe that participating in RoCKIn@Home challenge will bring a lot of experiences not only to the young students, but also to us. As a result, we are expecting to obtain more knowledge in the ongoing research in many fields in robotics.

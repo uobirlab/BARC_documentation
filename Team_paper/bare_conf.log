@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.4.15)  21 MAY 2014 11:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  21 MAY 2014 12:08
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
@@ -239,7 +239,7 @@ amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a
 mf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on bare_conf.pdf (6 pages, 1000338 bytes).
+Output written on bare_conf.pdf (6 pages, 1000337 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
