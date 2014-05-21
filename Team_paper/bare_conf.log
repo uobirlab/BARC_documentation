@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.18)  21 MAY 2014 02:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.4.15)  21 MAY 2014 11:51
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
 (./bare_conf.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
@@ -193,13 +187,14 @@ File: dorafinal.jpg Graphic file (type jpg)
  <use dorafinal.jpg>
 <nodes_cut.png, id=22, 2848.6425pt x 778.91pt>
 File: nodes_cut.png Graphic file (type png)
- <use nodes_cut.png> [4 <./dorafinal.jpg>]
+ <use nodes_cut.png>
 
-LaTeX Warning: Citation `smach' on page 5 undefined on input line 523.
+LaTeX Warning: Citation `smach' on page 4 undefined on input line 524.
 
-<state_machine.png, id=26, 554.07pt x 651.43375pt>
+[4 <./dorafinal.jpg>] <state_machine.png, id=26, 554.07pt x 651.43375pt>
 File: state_machine.png Graphic file (type png)
- <use state_machine.png>
+
+<use state_machine.png>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./nodes_cut.png> <./state_machine.png>]
@@ -211,7 +206,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 27.
- [6 <./BARC_FaceRec.png>])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -223,21 +218,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7
-
-] (./bare_conf.aux)
+[6 <./BARC_FaceRec.png>] (./bare_conf.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1881 strings out of 493848
- 28521 string characters out of 1152823
- 85698 words of memory out of 3000000
- 5172 multiletter control sequences out of 15000+50000
+ 1881 strings out of 495061
+ 28521 string characters out of 1182621
+ 84718 words of memory out of 3000000
+ 5073 multiletter control sequences out of 15000+50000
  38833 words of font info for 72 fonts, out of 3000000 for 9000
- 717 hyphenation exceptions out of 8191
- 26i,8n,21p,1015b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31 hyphenation exceptions out of 8191
+ 26i,8n,21p,953b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
@@ -246,9 +239,9 @@ amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a
 mf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on bare_conf.pdf (7 pages, 1001457 bytes).
+Output written on bare_conf.pdf (6 pages, 1000338 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
