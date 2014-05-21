@@ -29,26 +29,26 @@ IRLab, \emph{Intelligent Robotics Lab (IRLab), School of Computer Science,
 
 \bibitem{cmu}
 ``{CMU Sphinx- Open Source Toolkit For Speech Recognition},''
-  \url{http://cmusphinx.sourceforge.net}.
+  \url{http://cmusphinx.sourceforge.net}, accessed May 2014.
 
 \bibitem{strands}
-``{STRANDS - Spatio-Temporal Representation and Activities for Cognitive
-  Control in Long-term Scenarios},'' \url{(http://strands-project.eu/)}.
+STRANDS, \emph{STRANDS - Spatio-Temporal Represenations and Activities for
+  Cognitive Control in Long-Term Scenarios}, \url{http://strands-project.eu/},
+  accessed May 2014.
 
 \bibitem{cogx}
 ``{CogX - Cognitive Systems that Self-Understand and Self-Extend},''
-  \url{http://cogx.eu}.
+  \url{http://cogx.eu}, accessed May 2014.
 
 \bibitem{Nuchter08_TowardsSemanticMaps}
 A.~N\"{u}chter and J.~Hertzberg, ``Towards semantic maps for mobile robots,''
   \emph{Robot. Auton. Syst.}, vol.~56, no.~11, pp. 915--926, 2008.
 
 \bibitem{ros}
-``{ROS - Robot Operating System},'' \url{http://www.ros.org}.
-
-\bibitem{smach}
-``{ROS SMACH - Python library to build hierarchical state machines},''
-  \url{http://wiki.ros.org/smach}.
+M.~Quigley, B.~Gerkey, K.~Conley, J.~Faust, T.~Foote, J.~Leibs, E.~Berger,
+  R.~Wheeler, and A.~Ng, ``Ros: an open-source robot operating system,'' in
+  \emph{IEEE International Conference on Robotics and Automation, workshop on
+  open source software}, vol.~3, 2009.
 
 \bibitem{slam}
 G.~Grisetti, C.~Stachniss, and W.~Burgard, ``{Improving grid-based slam with
@@ -59,6 +59,16 @@ G.~Grisetti, C.~Stachniss, and W.~Burgard, ``{Improving grid-based slam with
 \bibitem{amcl}
 D.~Fox, ``Kld-sampling: Adaptive particle filters,'' in \emph{Advances in
   Neural Information Processing Systems (NIPS)}, 2001, pp. 713--720.
+
+\bibitem{Marder-Eppstein2010}
+E.~Marder-Eppstein, E.~Berger, T.~Foote, B.~Gerkey, and K.~Konolige, ``{The
+  office marathon: Robust navigation in an indoor office environment},'' 2010,
+  pp. 300--307.
+
+\bibitem{dwa}
+D.~Fox, W.~Burgard, and S.~Thrun, ``The dynamic window approach to collision
+  avoidance,'' \emph{Robotics Automation Magazine, IEEE}, vol.~4, no.~1, pp.
+  23--33, Mar 1997.
 
 \bibitem{Viola01_RapidObjDet}
 P.~Viola and M.~Jones, ``Rapid object detection using a boosted cascade of
