@@ -50,6 +50,10 @@ M.~Quigley, B.~Gerkey, K.~Conley, J.~Faust, T.~Foote, J.~Leibs, E.~Berger,
   \emph{IEEE International Conference on Robotics and Automation, workshop on
   open source software}, vol.~3, 2009.
 
+\bibitem{smach}
+``{SMACH - a task-level architecture for rapidly creating complex robot
+  behaviour},'' \url{http://wiki.ros.org/smach}, accessed May 2014.
+
 \bibitem{slam}
 G.~Grisetti, C.~Stachniss, and W.~Burgard, ``{Improving grid-based slam with
   rao-blackwellized particle filters by adaptive proposals and selective

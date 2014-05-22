@@ -373,7 +373,7 @@ Birmingham Autonomous Robot Club (BARC) connects students from the School of Com
 
 Birmingham Autonomous Robot Club (BARC) team was established five years ago in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to gain additional knowledge about robotics and to work on real robotic platforms and projects. Students were familiarising themselves with the Robot Operating System (ROS) by using a variety of ROS libraries and packages.
 
-Several students involved in the team were contributing to more complicated projects, which were mainly used to promote robotics during the school's open days. Such an example was a robot waitress, which accepted orders for drinks and brought them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example is a project using a Nao robot to repeat kids' gestures. An extra Kinect sensor was used to recognize the gestures. In spite of these interesting projects, a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produce any comprehensive work.
+Several students involved in the team were contributing to more complicated projects, which were mainly used to promote robotics during the school's open days. Such an example was a robot waitress, which accepted orders for drinks and brought them to the person. This robot had no manipulation, drinks were placed on the robot by a person. Another example is a project using a Nao robot to repeat kids' gestures. An extra Kinect sensor was used to recognise the gestures. In spite of these interesting projects, a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produce any comprehensive work.
 
 This year, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join the RoCKIn@home 2014 competition because it provides an interesting challenge and will help with progressing research and developing applications for domestic and industrial robots. Moreover, the cooperation between students and researchers is necessary. As a result, students can learn how to work in a team, but still work on some challenging parts alone and gain valuable knowledge while learning how to be responsible for their work.
 
@@ -387,13 +387,6 @@ The team has the support of the Intelligent Robotics Lab \cite{irlab} in the Sch
 %from rules: Reusability of the system or parts thereof - see STRANDS
 This section summarizes three different RoCKIN@home 2014 competition challenges and it describes what is intended to be performed with our robot this year. Our intention is to prepare a complete robotic platform which will integrate the state of the art in different Artificial Intelligent (AI) areas. The team does not have explicit expertise in any of those fields. Therefore, we would like to aim for high reusability of code in our robotic system and to demonstrate that the current state of the art in AI algorithms can be successfully used to produce a robust, effective and complete robotic system with domestic applications.  
 
-\begin{figure*}[!htb]
-\centering
-\includegraphics[width=\textwidth]{timetable.png}
-\caption{Timetable}
-\label{fig:plan}
-\end{figure*}
-
 \subsection{Catering for Granny Annie’s Comfort}
 
 A robot will receive requirements from Granny Annie. These requirements may contain interaction with an intelligent flat or bringing to her a specific object. We would like to prepare our robot so that it can perform the first part - cooperation/interaction with an intelligent flat. This subtask still contains interesting challenges, such as robust speech recognition and robot navigation in a way which is comfortable and natural for a human. %Of course, the communication with a flat's server mustbe working, but we do not expect too much difficulties in that. 
@@ -403,7 +396,7 @@ Moreover, we might cooperate with a Natural Language Processing group within our
 
 In challenges where the robot approaches humans, we will use the opportunity for closer cooperation with the STRANDS \cite{strands} project, as our robotics group within our school leads this project. Especially, a cooperation with Christian Dondrup, a PhD student at the University of Lincoln, might be beneficial in this stage, as he is working on Human Robot Interaction.
 
-The second part of this task - bringing someone a specific object - is even more challenging as it includes two large robotics domains, computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only object search. We will benefit from experiences from a previous project in our robotic group - CogX \cite{cogx}. In this project, one of the robot's abilities was to search for known objects by taking into account common sense knowledge (i.e. prior knowledge) in the form of probabilities of objects' presence in different rooms. However, this will still require a lot of effort from us, as the robot was not using ROS before and we will need to understand and integrate bits into our system. 
+The second part of this task - bringing someone a specific object - is even more challenging as it includes two large robotics domains, computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only object search. We will benefit from experiences from a previous project in our robotic group - CogX \cite{cogx}. In this project, one of the robot's abilities was to search for known objects by taking into account common sense knowledge (i.e. prior knowledge) in the form of probabilities of objects' presence in different rooms. However, this will still require a lot of effort from us, as the robot was not using ROS before and we will need to understand and integrate bits into our system. We assume to work on this part next year.
 
 \subsection{Welcoming visitors}
 
@@ -420,12 +413,27 @@ In order to automatically recognize changes in the position of furniture or obje
 \subsection{Timetable}
 %TODO actual plan
 %TODO more infor here, separation to work packages?
-%TODO check the link to video
-We decided to split the tasks for the competition into more milestones:
+Our plan is to perform complete \textit{Welcoming visitor}(referred as MW) task during competition. Moreover, we will work on \textit{Getting to know my home}(referred as MG) tasks, where we assume to be able to recognise state of doors. In order to achieve these goals, we set up our milestones:
 \begin{itemize}
-\item Welcoming task - recognising a known person, robust navigation in a known flat. 
+\item MW1 - training of a face, recognising a known person based on the face, mapping, localisation, robust navigation in a known map. Deadline: 7.5.2014
+\item MW2 - Increase robustness of face recognition, detection if a person is following the robot, speech recognition. Deadline: 27.7.2014
+\item MW3 - Integration and test, producing new video. Deadline: 31.7.2014
+\item MW4 - Cloth recognition, robot behaviour to restrict person to follow it. Deadline 31.8.2014
+\item MW5 - Integration and test. Deadline: 5.9.2014
+\item MW6 - \textbf{Perform complete \textit{Welcoming tasks} during British science festival 6.9.-11.9.2014}
+\item MW7 - Perform more test. Deadline 30.9.2014
+\item MG1 - Work on autonomous recognition of state of doors, cooperation with human in detection of other changes. Deadline 31.10.2014
+\item Test of overall system. Deadline 23.11.2014
 \end{itemize}
-An expected plan of our activities can be seen in Fig. \ref{fig:plan}.
+The expected timetable of our milestones can be seen in Fig. \ref{fig:plan}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=3.in]{timetable.png}
+\caption{Timetable}
+\label{fig:plan}
+\end{figure}
+
 
 
 \section{Team members}
@@ -438,32 +446,28 @@ Currently, the team has four active members - one bachelor's student and three P
 She is a PhD student with research interests in AI planning and scheduling. In the team, she has two roles. First, she is the team leader, which mainly includes representation of the team when formal communication outside of the team is necessary. Also, she makes sure that every member of the team knows what is happening, how their modules will be used within the system and what is required from them. The second role is that she is working also on the robot's subsystem. Her research interest in Artificial Intelligence (AI) planning will be useful for creating the robot's overall behaviour. Moreover, she is interested in computer vision and speech recognition.
 
 \subsubsection*{Scientific background}
-She did her bachelor's and master's studies at the Czech Technical University in Prague with a focus on Robotics. This study branch gave her a wide range of knowledge in the fields of mechatronics and artificial intelligence. She was involved as a team leader of the student robotics team FELaaCZech that took part in the international competition Eurobot for four years. Moreover, she was a member of the team participating in robotic outdoor challenge RoboTour and Sick Robotic day. 
+She did her bachelor's and master's studies at the Czech Technical University in Prague with a focus on Robotics. This study branch gave her a wide range of knowledge in the fields of mechatronics and artificial intelligence. She was involved as a team leader of the student robotics team FELaaCZech that took part in the international competition Eurobot for four years. 
 
 Currently, she is a PhD student with a focus on AI planning and scheduling, which are important techniques for a robot to make decisions on when, how and what needs to be performed. Such decisions are necessary in service robotics when a robot needs to complete tasks assigned by a human. The robot needs to have a control framework that makes decisions concerning which particular task should be executed. The quality of the decisions influence the overall performance of the robot and of course, the robot's goal must satisfy as many of the requirements assigned by the humans as possible. Requirements for the robot's control framework are deadline awareness, handling uncertainty about task duration and resources, creating plans on how to complete general tasks and awareness of changes in the environment where the robot operates. 
 
-The assigned task might have some time constraints, for example release and due dates. Therefore, scheduling techniques are important to handle this. Each task has also defined a goal or activity, which needs to be achieved or performed, respectively. This performance can be represented by a state machine for well defined tasks. However, planning techniques are needed for more general tasks, for example finding an object for which the position varies in the robot's environment.
-
-Her research is influenced %TODO LENKA: I Think maybe is better to write initially that you are wokring on that, STRANDS, rather than just infuenced. Its better for the inovation and resusability link as well! :) 
- by the EU STRANDS project \cite{strands}. "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project).". Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
+Her research is part of the EU STRANDS project \cite{strands}. "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project).". Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
 
 \subsection{Marco Antonio Becerra Pedraza}
 
-He obtained his B.Eng. degree in Mechatronics from the Instituto Politécnico Nacional in Mexico and his M.Eng. degree in Computer Science from the Universidad Nacional Autónoma de México. He is a former member of the PUMAS RoboCup@Home team. Currently he is a PhD student with research interests that include 3D perception, human sensing, knowledge representation and reasoning for robotics.
+He is a PhD student in the School of Computer Science, University of Birmingham. His research interests are 3D perception, human sensing, knowledge representation and reasoning. Inside the team he has worked with the human sensing capabilities of the robot.
 
-\subsubsection*{Research Interests}
+\subsubsection*{Scientific background}
+He obtained his bachelor degree in Mechatronics Engineering from the Instituto Polit\'{e}cnico Nacional in Mexico and a master degree in Computer Science from the Universidad Nacional Aut\'{o}noma de M\'{e}xico. He is a former member of the PUMAS RoboCup@Home team.
 
-He started his PhD studies five months ago, thus he has not yet specified his research topic. However, he is interested in two fields, semantic mapping and activity recognition.
+During his PhD, he will be doing research about semantic mapping of human events. The topic has two main components:
 
-Semantic mapping can be conceived as an extension of a mapping problem in robotics \cite{Nuchter08_TowardsSemanticMaps}. Traditional maps take into consideration a spatial shape of an environment for motion planning purposes (e.g. navigation, localization). But generally, the environment has a more complex structure. Therefore, the role of semantic maps is to add concrete descriptions of components of the environment, their structure and relations. The robot can reason about the scene (e.g. planning, prediction, explanation, interpretation) using the descriptions in the semantic map.
+Semantic mapping can be conceived as an extension of the mapping problem \cite{Nuchter08_TowardsSemanticMaps}. Traditionally maps were used in robotics mostly for navigation purposes. But the environment has additional spatial information that needs to be handled. Semantic maps extend the concept of maps to handle more features from the environment (e.g. structure, functionalities, events). The goal is to reason about the scene (e.g. planning, prediction, explanation, interpretation).
 
- %TODO MARCO: maybe rephrase that paragraph to be more coherent
-Activity recognition can be useful in service robotics where robots should share scenarios %TODO MARCO: please define what scenarios are...eg example?
-with other agents (e.g. humans, animals, other robots) and an interaction between them is expected. A robot needs to be aware of another agent's actions, i.e. the capacity to recognize the ongoing actions in the environment. The goal of activity recognition is to be capable of building representations of activity from observations; of special interest are qualitative spatio-temporal representations of activity because they are more human-like and they can be used in more general cases.
+Activity recognition is about using observations from the world to build representations of the ongoing actions. Later, these representations can be used to find associated structures.
 
 \subsection{Manolis Chiou}
 
-He is a PhD student in the Intelligent Robotics lab of the School of Computer Science, University of Birmingham. He has a multidisciplinary background in control engineering, robotics and AI. His work on BARC involves but is not limited to control, navigation, localization and in the future Human-Robot-Interaction (HRI).
+He is a PhD student in the Intelligent Robotics lab of the School of Computer Science, University of Birmingham. He has a multidisciplinary background in control engineering, robotics and AI. His work on BARC involves but is not limited to control, navigation, localisation and in the future Human-Robot-Interaction (HRI).
 
 \subsubsection*{Scientific background}
 
@@ -471,7 +475,7 @@ His first degree is in Control Engineering from the Technological Institute of P
 
 The working title of his PhD thesis is ``Flexible robotic control via co-operation between an Operator and an AI based control system". It addresses the problem of variable autonomy in teleoperated mobile robots. Variable autonomy refers to the different levels of autonomous capabilities that are implemented on a robot.
 
-Robots used on demanding and safety critical tasks (e.g. search and rescue, hazardous environments inspection, bomb disposal), which are currently teleoperated, could soon start to benefit from autonomous capabilities. Such capabilities include algorithms for automatic robot navigation, algorithms for Simultaneous Localization And Mapping (SLAM) and etc. Robots could usefully use AI control algorithms to autonomously take control of certain functions when the human operator is suffering a high workload, high cognitive load, anxiety, or other distractions and stresses. In contrast, some circumstances may still necessitate direct human control of the robot. The research will tackle the problem by designing control algorithms for switching between the different autonomy levels in an optimal way. 
+Robots used on demanding and safety critical tasks (e.g. search and rescue, hazardous environments inspection, bomb disposal), which are currently teleoperated, could soon start to benefit from autonomous capabilities. Such capabilities include algorithms for automatic robot navigation, algorithms for Simultaneous Localisation And Mapping (SLAM) and etc. Robots could usefully use AI control algorithms to autonomously take control of certain functions when the human operator is suffering a high workload, high cognitive load, anxiety, or other distractions and stresses. In contrast, some circumstances may still necessitate direct human control of the robot. The research will tackle the problem by designing control algorithms for switching between the different autonomy levels in an optimal way. 
 
 
 \subsection{Sean Bastable}
@@ -480,7 +484,7 @@ He is a Computer Science bachelor's student in his final year. It is expected th
 
 \subsubsection*{Scientific background}
  
-His final year project was about investigating and implementing a visual localization system for a mobile robot. This allowed the robot to continue localising in environments where laser based localisation cannot be used. A good example of this is in domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
+His final year project was about investigating and implementing a visual localisation system for a mobile robot. This allowed the robot to continue localising in environments where laser based localisation cannot be used. A good example of this is in domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
  
 The project used a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
 The robot was trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can take additional pictures and compare them to the training images in order to find an estimate of its location. Principal Component Analysis (PCA) was used to match images in the localisation phase to those in the test phase. 
@@ -495,17 +499,16 @@ The robot Dora was kindly given for the team's needs, see Fig.\ref{fig:dora}. Sh
 
 Furthermore, team members have access to different sensors such as laser scanners, depth and RGB cameras. At the moment, Dora has no manipulator arm installed. In the future, it is planned to mount one small manipulator arm in order to extend Dora's capabilities.
 
-%TODO better picture of Dora
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.in]{dorafinal.jpg}
-\caption{Dora is an extended Pioneer 3D-X robot with sensors such as a laser range finder, depth camera and a laptop mounted on top as the brain of the robot.}
+\includegraphics[width=2.in]{dora_new.png}
+\caption{Dora is an extended Pioneer 3D-X robot with sensors such as a laser range finder, depth camera and a laptop mounted on top.}
 \label{fig:dora}
 \end{figure}
 
 \section{Software architecture}
-%TODO PROOF reading
-As our goal is to achieve high reusability, modularity and openness, we built our software architecture on the Robot Operating System (ROS) middleware, using version Hydro \cite{ros}. ROS's open source philosophy is powerful and allows code reusability by different programmers. It allows us to use robust, state-of-the-art subsystems which are not in our research interest, such as localization, mapping and navigation around obstacles. We can even add our own AI algorithms without worrying how to access specific hardware on a robot, as standard drivers are provided by ROS for many items of hardware used in robotics. Even more important is the fact that it provides a standardised way to provide inputs/outputs of subsystems. As a result, it can save valuable time during the merging of different subsystems written by different users. Last but not least, ROS was also chosen as it has become almost a standard choice for researchers.
+
+As our goal is to achieve high reusability, modularity and openness, we built our software architecture on the Robot Operating System (ROS) middleware, using version Hydro \cite{ros}. ROS's open source philosophy is powerful and allows code reusability by different programmers. It allows us to use robust, state-of-the-art subsystems which are not in our research interest, such as localisation, mapping and navigation around obstacles. We can even add our own AI algorithms without worrying how to access specific hardware on a robot, as standard drivers are provided by ROS for many items of hardware used in robotics. Even more important is the fact that it provides a standardised way to provide inputs/outputs of subsystems. As a result, it can save valuable time during the merging of different subsystems written by different users. Last but not least, ROS was also chosen as it has become almost a standard choice for researchers.
 %and thus our lab has extensive hands on experience.
 
 In order to fulfil the \textit{Welcoming visitors} task, we have already developed some main components such as face recognition and navigation. Moreover, we have created a basic structure of our software system for this task, which links all used components/ROS nodes, see Fig. \ref{fig:nodes}. The different nodes communicate by exchanging ROS messages and by using ROS actions.
@@ -518,12 +521,11 @@ In order to fulfil the \textit{Welcoming visitors} task, we have already develop
 \end{figure*}
 
 \subsection{State machine}
-%TODO needs proof reading
 This year, we are focused on tasks which can be easily defined as a sequence of some actions. Therefore, we decided to use a state machine as the control structure of our components. A state machine should generally monitor the state of a robot's components and switch between them according to predefined rules. Thus, it is the core element of our robotic system that connects the rest of the subsystems together.
 
-For creating a state machine, we use ROS's SMACH package, that is ``a task-level architecture for rapidly creating complex robot behavior" \cite{smach}. Our state machine can be seen in Fig. \ref{fig:smach} and it connect these nodes:
+For creating a state machine, we use ROS's SMACH package, that is ``a task-level architecture for rapidly creating complex robot behaviour" \cite{smach}. Our state machine can be seen in Fig. \ref{fig:smach} and it connect these nodes:
 \begin{itemize}
-\item Teleop - In order to perform the \textit{Welcoming visitors} task, a robot needs to recognize that someone is using the doorbell. This can be done by cooperating with an intelligent flat or by recognizing a specific sound. However, we have not yet prepared any of these approaches. Therefore, we use a joystick as a simulation of pressing the doorbell. 
+\item Teleop - In order to perform the \textit{Welcoming visitors} task, a robot needs to recognise that someone is using the doorbell. This can be done by cooperating with an intelligent flat or by recognising a specific sound. However, we have not yet prepared any of these approaches. Therefore, we use a joystick as a simulation of pressing the doorbell. 
 The second functionality of this state is to inform the robot that the Doctor has finished his work in Granny's bedroom. This state is only temporary, we will replace it with the recognition of a doorbell press and speech recognition for receiving a command from the Doctor, respectively.
 \item Navigate to a place - These states send navigation goal commands (see Section \ref{sec:navig}). For now, we have predefined the places in an existing map. However, we intend to extend this so that the robot will be able to find another correct position if a predefined place is occupied.
 \item Speech - These states send a command with a predefined sentence to a speech synthesis node in order to improve the human interaction.
@@ -552,13 +554,11 @@ For navigation and obstacle avoidance, ROS's \textsf{navigation stack} is used. 
 These nodes were made as part of another project involving mixed initiative HRI in emergency response robots. They allow switching between autonomous behaviour and teleoperation. Of course, this will not be used during the competition, but it is a helpful functionality during testing, when we can easily pause the robot's behaviour or place the robot in a specific position in its environment. Moreover, it provides a remote emergency stop, which increases the safety of the robot.
 
 \subsection{\label{sec:vision}Face detection and recognition}
-In order to be able to recognise a person standing in front of the entrance, the system implements face detection, which is used to find candidate face patterns inside an image, and face recognition, which finds the best match of a detected face within a known dataset, see Fig. \ref{fig:face}.
+In order to be able to recognise a person standing in front of the entrance, the system implements face detection, which is used to find candidate face patterns inside an image, and face recognition, which finds the best match of a detected face with a known dataset, see Fig. \ref{fig:face}.
 
-Face detection is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm uses a supervised machine learning approach, where a cascade function is trained with many positive and negative images. Then, it is used to detect faces in other images. The algorithm uses many simple Haar feature classifiers which are applied incrementally in different regions of the image in order to discriminate candidate face regions.
-%TODO Marco
-% One of these feature classifiers is not capable of identifying a face just by itself, but the combined and supplementary use of all the simple Haar classifiers succeeds.
+Face detection is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm looks for faces by applying incrementally many simple Haar classifiers. The composition is performed by a cascade function, which needs to be trained \textit{a priori} with many positive and negative images. The resulting classifier can find faces efficiently with independence of the size of the faces and light conditions.
 
-Face recognition is performed by applying a \textit{Local Binary Pattern Histogram} (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}. The principle of this algorithm is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, it divides the formed LBP image into $m$ local regions and extracts the histogram from each. Finally, classification is performed by comparing the resulting histograms with the dataset.%TODO need to ask MARCO
+Face recognition is performed by applying a \textit{Local Binary Pattern Histogram} (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}. The principle of the algorithm is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, it divides the formed LBP image into $m$ local regions and computes the LBP distribution histogram from each region. Finally, classification is performed by comparison between the LBP histograms of a new face with the ones from the dataset.
 
 \begin{figure}[!t]
 \centering
@@ -654,7 +654,7 @@ Face recognition is performed by applying a \textit{Local Binary Pattern Histogr
 %TODO proof reading
 %from rules: Applicability and relevance to domestic/industrial robotics [@Home / @Work]
 %Lenka
-All team members have research interests in areas where a robot must cooperate with people in order to provide the best performance. To summarize, Lenka is working on the STRANDS project, which aims to develop robots capable of helping elderly people with every day activities. Marco is interested in activity recognition which can significantly improve the cooperation of robots and humans. Manolis is doing research on flexible robotic control via cooperation between a human and an autonomous robot, especially in environments which are difficult for a robot. Sean did his bachelor's project on visual robot localization in human crowds. Therefore, we believe that our work is strongly relevant to the RoCKIn@Home challenge.
+All team members have research interests in areas where a robot must cooperate with people in order to provide the best performance. To summarize, Lenka is working on the STRANDS project, which aims to develop robots capable of helping elderly people with every day activities. Marco is interested in activity recognition which can significantly improve the cooperation of robots and humans. Manolis is doing research on flexible robotic control via cooperation between a human and an autonomous robot, especially in environments which are difficult for a robot. Sean did his bachelor's project on visual robot localisation in human crowds. Therefore, we believe that our work is strongly relevant to the RoCKIn@Home challenge.
 
 Moreover, if our team participates in this challenge, it will be an interesting challenge especially to newly incoming members, as we are expecting that more first year bachelor's students will join the team this summer. We believe that participating in the RoCKIn@Home challenge will bring a lot of experiences not only to the young students, but also to us. As a result, we are expecting to obtain more knowledge in the ongoing research in many fields in robotics.
 

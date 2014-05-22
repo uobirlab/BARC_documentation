@@ -3,52 +3,51 @@ The top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ./ref.bib
-Warning--I didn't find a database entry for "smach"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty booktitle in Marder-Eppstein2010
 
 Done.
-You've used 12 entries,
+You've used 13 entries,
             4039 wiz_defined-function locations,
-            886 strings with 9532 characters,
-and the built_in function-call counts, 8901 in all, are:
-= -- 686
-> -- 203
+            889 strings with 9645 characters,
+and the built_in function-call counts, 9195 in all, are:
+= -- 708
+> -- 204
 < -- 79
-+ -- 108
++ -- 109
 - -- 32
-* -- 423
-:= -- 1306
-add.period$ -- 23
-call.type$ -- 12
-change.case$ -- 12
+* -- 431
+:= -- 1354
+add.period$ -- 25
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 195
-cite$ -- 13
-duplicate$ -- 623
-empty$ -- 754
+cite$ -- 14
+duplicate$ -- 652
+empty$ -- 789
 format.name$ -- 40
-if$ -- 2055
+if$ -- 2121
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 113
-newline$ -- 59
+int.to.str$ -- 13
+missing$ -- 119
+newline$ -- 62
 num.names$ -- 12
-pop$ -- 276
+pop$ -- 295
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 692
+skip$ -- 718
 stack$ -- 0
-substring$ -- 451
-swap$ -- 506
+substring$ -- 452
+swap$ -- 520
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
+type$ -- 13
 warning$ -- 1
 while$ -- 36
-width$ -- 14
-write$ -- 131
-(There were 2 warnings)
+width$ -- 15
+write$ -- 138
+(There was 1 warning)
