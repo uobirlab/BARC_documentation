@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.25)  23 MAY 2014 15:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.17)  23 MAY 2014 17:51
 entering extended mode
  %&-line parsing enabled.
 **bare_conf.tex
@@ -370,18 +370,25 @@ LaTeX Font Info:    ... okay on input line 290.
 \MPnumerator=\count97
 \everyMPtoPDFconversion=\toks19
 )
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 340.
+
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 339.
+(Font)              <7> on input line 340.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 339.
+(Font)              <5> on input line 340.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-<timetable.png, id=10, 726.715pt x 291.0875pt>
+] <timetable.png, id=10, 726.715pt x 291.0875pt>
 File: timetable.png Graphic file (type png)
- <use timetable.png> [2 <./timetable.png>] [3] <dora_new.png, id=20, 714.67pt x
- 1072.005pt>
+
+<use timetable.png> [2 <./timetable.png>] [3]
+<dora_new.png, id=20, 714.67pt x 1072.005pt>
 File: dora_new.png Graphic file (type png)
  <use dora_new.png>
 <nodes_cut.png, id=21, 2848.6425pt x 778.91pt>
@@ -391,7 +398,7 @@ File: nodes_cut.png Graphic file (type png)
 File: state_machine.png Graphic file (type png)
 
 <use state_machine.png>
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 543.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 544.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -419,10 +426,10 @@ Before submitting the final camera ready copy, remember to:
 
 [6 <./BARC_FaceRec.png>] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 2088 strings out of 495061
- 30341 string characters out of 1182621
+ 2106 strings out of 495061
+ 30644 string characters out of 1182621
  87260 words of memory out of 3000000
- 5265 multiletter control sequences out of 15000+50000
+ 5280 multiletter control sequences out of 15000+50000
  39929 words of font info for 73 fonts, out of 3000000 for 9000
  31 hyphenation exceptions out of 8191
  26i,8n,21p,961b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -434,7 +441,7 @@ mf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/
 type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb
 i8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 1997385 bytes).
+Output written on bare_conf.pdf (6 pages, 1998375 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
