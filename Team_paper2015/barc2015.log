@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.1)  5 AUG 2015 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.1)  31 AUG 2015 00:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,106 +382,95 @@ LaTeX Font Info:    ... okay on input line 290.
 \everyMPtoPDFconversion=\toks19
 )
 
-LaTeX Warning: Citation `irlab' on page 1 undefined on input line 393.
+LaTeX Warning: Citation `sick' on page 1 undefined on input line 392.
+
+
+LaTeX Warning: Citation `irlab' on page 1 undefined on input line 397.
 
 <logo_barc.png, id=1, 790.955pt x 681.54625pt>
 File: logo_barc.png Graphic file (type png)
  <use logo_barc.png>
-Package pdftex.def Info: logo_barc.png used on input line 397.
+Package pdftex.def Info: logo_barc.png used on input line 402.
 (pdftex.def)             Requested size: 151.20154pt x 130.28549pt.
 
+(./hardware.tex
 
-LaTeX Warning: Citation `cmu' on page 1 undefined on input line 414.
+LaTeX Warning: Reference `fig:Dora' on page 1 undefined on input line 1.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 6.
+<dora_new.png, id=3, 714.67pt x 1072.005pt>
+File: dora_new.png Graphic file (type png)
+ <use dora_new.png>
+Package pdftex.def Info: dora_new.png used on input line 15.
+(pdftex.def)             Requested size: 144.54pt x 216.80174pt.
+) (./software.tex
+
+LaTeX Warning: Citation `ros' on page 1 undefined on input line 1.
+
+
+LaTeX Warning: Citation `strands' on page 1 undefined on input line 2.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./logo_barc.png>]
 
-LaTeX Warning: Citation `strands' on page 2 undefined on input line 417.
+LaTeX Warning: Citation `smach' on page 2 undefined on input line 12.
 
 
-LaTeX Warning: Citation `cogx' on page 2 undefined on input line 419.
+LaTeX Warning: Citation `strand_top' on page 2 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec:navig' on page 2 undefined on input line 425.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 437.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 437.
-
-LaTeX Warning: Reference `fig:plan' on page 2 undefined on input line 447.
-
-[2]
-
-LaTeX Warning: Citation `strands' on page 3 undefined on input line 471.
+LaTeX Warning: Citation `bruno' on page 2 undefined on input line 35.
 
 
-LaTeX Warning: Citation `Nuchter08_TowardsSemanticMaps' on page 3 undefined on 
-input line 482.
+LaTeX Warning: Citation `slam' on page 2 undefined on input line 43.
 
-[3] (./hardware.tex <dora_new.png, id=19, 714.67pt x 1072.005pt>
-File: dora_new.png Graphic file (type png)
-
-<use dora_new.png>
-Package pdftex.def Info: dora_new.png used on input line 3.
-(pdftex.def)             Requested size: 144.54pt x 216.80174pt.
-
-
-LaTeX Warning: Reference `fig:Dora' on page 4 undefined on input line 8.
-
-
-LaTeX Warning: Reference `tab.n_sensors' on page 4 undefined on input line 11.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 22.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 22.
-) (./software.tex
-
-LaTeX Warning: Citation `ros' on page 4 undefined on input line 1.
-
-
-LaTeX Warning: Citation `strands' on page 4 undefined on input line 2.
-
-
-LaTeX Warning: Reference `fig:architecture' on page 4 undefined on input line 5
-.
-
-
-LaTeX Warning: Citation `smach' on page 4 undefined on input line 12.
-
-
-LaTeX Warning: Citation `slam' on page 4 undefined on input line 25.
-
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 25.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 43.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 
-LaTeX Warning: Citation `amcl' on page 4 undefined on input line 28.
-
-[4 <./dora_new.png>]
-
-LaTeX Warning: Citation `Marder-Eppstein2010' on page 5 undefined on input line
- 30.
+LaTeX Warning: Citation `amcl' on page 2 undefined on input line 45.
 
 
-LaTeX Warning: Citation `dwa' on page 5 undefined on input line 30.
+LaTeX Warning: Citation `Marder-Eppstein2010' on page 2 undefined on input line
+ 47.
 
 
-LaTeX Warning: Reference `fig:face' on page 5 undefined on input line 39.
+LaTeX Warning: Citation `dwa' on page 2 undefined on input line 47.
 
 
-LaTeX Warning: Citation `Viola01_RapidObjDet' on page 5 undefined on input line
- 41.
+LaTeX Warning: Citation `Viola01_RapidObjDet' on page 2 undefined on input line
+ 60.
 
+[2 <./dora_new.png>]
 
-LaTeX Warning: Citation `Ahonen04_FaceRecLBP' on page 5 undefined on input line
- 43.
+LaTeX Warning: Citation `Ahonen04_FaceRecLBP' on page 3 undefined on input line
+ 62.
 
+<BARC_FaceRec.png, id=18, 630.355pt x 416.55624pt>
+File: BARC_FaceRec.png Graphic file (type png)
+ <use BARC_FaceRec.png>
+Package pdftex.def Info: BARC_FaceRec.png used on input line 66.
+(pdftex.def)             Requested size: 216.81pt x 143.27348pt.
 )
+(./plan.tex
+
+LaTeX Warning: Reference `fig:plan' on page 3 undefined on input line 45.
+
+) (./evaluation.tex) (./team_members.tex [3 <./BARC_FaceRec.png>]
+
+LaTeX Warning: Citation `strands' on page 4 undefined on input line 16.
+
+
+LaTeX Warning: Citation `Nuchter08_TowardsSemanticMaps' on page 4 undefined on 
+input line 27.
+
+[4])
 No file barc2015.bbl.
 
 ** Conference Paper **
@@ -503,13 +492,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2293 strings out of 494989
- 33460 string characters out of 6180578
- 91793 words of memory out of 5000000
- 5501 multiletter control sequences out of 15000+600000
- 41653 words of font info for 75 fonts, out of 8000000 for 9000
+ 2288 strings out of 494989
+ 33464 string characters out of 6180578
+ 90794 words of memory out of 5000000
+ 5492 multiletter control sequences out of 15000+600000
+ 39184 words of font info for 68 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 27i,8n,21p,852b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,21p,876b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
@@ -517,9 +506,9 @@ fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on barc2015.pdf (5 pages, 1542200 bytes).
+Output written on barc2015.pdf (5 pages, 2100925 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

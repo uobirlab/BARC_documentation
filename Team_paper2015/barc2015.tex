@@ -341,6 +341,7 @@ Website: \textit{http://lenka-robotics.eu/index.php/robotic-club}}
 % make the title area
 \maketitle
 
+%TODO edit in the end
 \begin{abstract}
 
 Birmingham Autonomous Robot Club (BARC) connects students from the University of Birmingham, with a strong interest in robotic applications and competitions. 
@@ -381,16 +382,20 @@ Finally, the conclusion summarises our motivation and relevance for this competi
 % no \IEEEPARstart
 
 
-Our interest in robotics is expressed through learning by doing. Therefore we are actively engaging or organising different workshops, projects and public engagement events. Our main focus is our participation in the EU funded RoCKIN@Home robotics competition.
+
 
 Birmingham Autonomous Robot Club (BARC) was established in 2011 in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to gain additional knowledge about robotics and to work on real robotic platforms and projects. 
 %Students were familiarising themselves with the Robot Operating System (ROS) by using a variety of ROS libraries and packages.
-Several students involved in the team contributed to projects, which were mainly used to promote robotics during the school's open days, for example a robot waitress, which accepted orders for drinks and brought them to the person.
+Several students involved in the team contributed to projects, which were mainly used to promote robotics during the school's open days, for example a robotic waitress, which accepted orders for drinks and deliver them.
 % This robot had no manipulation, drinks were placed on the robot by a person. Another example is a project using a Nao robot to repeat kids' gestures. An extra Kinect sensor was used to recognise the gestures. In spite of these interesting projects, a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produce any comprehensive work.
 
-This year, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in a robotics competition. We would like to join the RoCKIn@home 2014 competition because it provides an interesting challenge and will help with progressing research and developing applications for domestic and industrial robots. Moreover, the cooperation between students in the team is necessary. As a result, students can learn how to work in a team, but still work on some challenging parts alone and gain valuable knowledge while learning how to be responsible for their work.
+In 2014, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in robotics competitions. We participated in Sick Days 2014 \cite{sick} and RoCKIn@Home 2014. 
+This year, we would like to participate in RoCKIn@Home as well, as we have still many things to learn and improve. 
+Hence, this paper overviews our system from last year and analyses drawbacks of our approaches. 
+Moreover, it discuss extensions what we are currently working on. 
 
 The team has the support of the Intelligent Robotics Lab \cite{irlab} in the School of Computer Science. The lab conducts research and has expertise in a variety of fields including but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore, the lab has strong links with the industry. 
+We are also starting to cooperate with other departments within our university, such as electrical and mechanical engineering. We hope to create more interdisciplinary team than we had last year.
 
 \begin{figure}[!t]
 \centering
@@ -399,117 +404,6 @@ The team has the support of the Intelligent Robotics Lab \cite{irlab} in the Sch
 \label{fig:dora}
 \end{figure}
 
- 
-\section{Our focus and plan}
-
-% % % TODO % % % %
-%from rules: Innovative technology (if any) TODO describe usage of STRANDS
-%from rules: Reusability of the system or parts thereof - see STRANDS
-This section summarises three different RoCKIN@home 2014 competition challenges and it describes what is intended to be performed with our robot this year. Our intention is to prepare a complete robotic platform, which will integrate the state of the art in different Artificial Intelligent (AI) areas. The team does not have explicit expertise in any of those fields. Therefore, we would like to aim for high reusability of code in our robotic system and to demonstrate that the current state of the art in AI algorithms can be successfully used to produce a robust, effective and complete robotic system with domestic applications.  
-
-\subsection{Catering for Granny Annie’s Comfort}
-
-A robot will receive requirements from Granny Annie, which may contain interaction with an intelligent flat or bringing to her a specific object. We would like to prepare our robot so that it can perform the first part - cooperation/interaction with an intelligent flat. This subtask still contains interesting challenges, such as robust speech recognition and robot navigation in a way, which is comfortable and natural for a human.  
-
-The problem of speech recognition is often discussed within the robotic community. It is something, which is necessary for future robots to cooperate with humans. Assuming a robot is working at Granny's flat, the robot can learn and adapt to her voice, which will increases its performance over time. Moreover, Granny is living alone, thus, it can be assumed that the level of background noise is minimal. In contrast, during the competition, speech recognition provides a lot of challenges. The background noise is really high during competition because of the spectators. Furthermore, the person playing Granny Annie changes, hence a robot cannot improve its behaviour. We do not plan to develop our system from scratch, rather we plan to use CMU Sphinx - Open Source Toolkit For Speech Recognition \cite{cmu}. 
-Moreover, we might cooperate with a Natural Language Processing group within our school to improve the system's behaviour.
-
-For a challenge, where the robot approaches humans, we will use the opportunity for closer cooperation with the STRANDS \cite{strands} project, as our robotics group within our school leads this project. Especially, a cooperation with Christian Dondrup, a PhD student at the University of Lincoln, might be beneficial in this stage, as he is working on Human Robot Interaction.
-
-The second part of this task - bringing someone a specific object - is even more challenging as it includes two large robotics domains, computer vision and manipulation. As our robot has no manipulator this year (see Section \ref{sec:hardware}), we might be able to perform only object search. We might benefit from experiences from a previous project in our robotic group - CogX \cite{cogx}. In this project, one of the robot's abilities was to search for known objects by taking into account common sense knowledge (i.e. prior knowledge) in the form of probabilities of objects' presence in different rooms. However, this will still require a lot of effort from us, as the robot was not using ROS before and we will need to understand and integrate bits into our system. We assume to work on this part next year.
-
-\subsection{Welcoming visitors}
-
-In this task, a robot should welcome visitors, recognize them and accompany them to a specific location in Granny's flat. Several areas are needed in this task: computer vision for face recognition (in the known person case, Dr. Kimbley) and for uniform detection (in the case of the delivery-man). Moreover, machine learning techniques are needed to be able to learn these two patterns in order to recognise them. A robot can also benefit from speech recognition if face/uniform recognition does not provide a certain decision. Finally, a robot must have robust navigation in an environment in order to accompany a person to a specific place. 
-
-In our team, we agreed to start with this task because of our expertise. We have already prepared a robotic system, which is able to recognise faces based on OpenCV (for details see Section \ref{sec:vision}) and robustly navigate in a known environment (see Section \ref{sec:navig}). As a next step, we will work on uniform detection. Again, we will use the expertise within the STRANDS project, where a robot also must recognise different types of uniforms. We also plan to improve the robot's behaviour and we are currently recruiting members towards this goal. For example, it will recognise if a person is following it and will perform actions to ensure this.
-
-\subsection{Getting to know my home}
-
-A robot should recognise changes in a flat in this scenario, which can be done autonomously or by cooperation with a human. It is assumed that our robot will be able to recognise the state of doors autonomously. It will combine measurements taken by a laser scanner and a Kinect. The team has experience with such a problem, thus the already found solution will be integrated into our robotic system. 
-
-In order to automatically recognise changes in the position of furniture or objects, we might take benefit of cooperation with the STRANDS project again, as this is one of the challenges being solved there. However, we plan to combine it with cooperation with a human, where he/she will guide the robot to the object, which has changed position. The algorithms for the robot to be able to follow a person are already prepared. Furthermore, a former team member was working on a project where a robot can recognise where a human finger is pointing. We will use this work and extend it to fit our needs.
-
-\subsection{Timetable}
-
-Our plan is to perform complete \textit{Welcoming visitor}(referred as MW) task during competition. Moreover, we will work on \textit{Getting to know my home}(referred as MG) task, where we assume to be able to recognise state of doors. In order to achieve these goals, we set up our milestones:
-\begin{itemize}
-\item MW1 - training of a face, recognising a known person based on the face, mapping, localisation, robust navigation in a known map. Deadline: 7.5.2014
-\item MW2 - Increase robustness of face recognition, detection if a person is following the robot, speech recognition. Deadline: 27.7.2014
-\item MW3 - Integration and test, producing new video. Deadline: 31.7.2014
-\item MW4 - Cloth recognition, robot behaviour to restrict person to follow it. Deadline 31.8.2014
-\item MW5 - Integration and test. Deadline: 5.9.2014
-\item MW6 - \textbf{Perform complete \textit{Welcoming visitor} task during British science festival 6.9.-11.9.2014}
-\item MW7 - Perform more test. Deadline 30.9.2014
-\item MG1 - Work on autonomous recognition of state of doors, cooperation with human in detection of other changes. Deadline 31.10.2014
-\item Test of overall system. Deadline 23.11.2014
-\end{itemize}
-The expected timetable of our milestones can be seen in Fig. \ref{fig:plan}.
-
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[width=3.in]{timetable.png}
-%\caption{Timetable}
-%\label{fig:plan}
-%\end{figure}
-
-
-
-\section{Team members}
-%from rules:  Main involved research areas in the team work
-Currently, the team has four active members - one bachelor's student and three PhD students in the first year of their studies. All team members are students in the School of Computer Science, University of Birmingham. The overview of team members follows along with a description of their background and research interests. The final team line-up is likely to change before the competition as more members will contribute.
-
-\subsection{Lenka Mudrova}
-
-She is a PhD student with research interests in AI planning and scheduling. In the team, she has two roles. First, she is the team leader, which mainly includes representation of the team when formal communication outside of the team is necessary. Also, she makes sure that every member of the team knows what is happening, how their modules will be used within the system and what is required from them. The second role is that she is working also on the robot's subsystem. Her research interest in Artificial Intelligence (AI) planning will be useful for creating the robot's overall behaviour next year. Moreover, she is interested in computer vision and speech recognition.
-
-\subsubsection*{Scientific background}
-She did her bachelor's and master's studies at the Czech Technical University in Prague with a focus on Robotics. This study branch gave her a wide range of knowledge in the fields of mechatronics and artificial intelligence. She was involved as a team leader of the student robotics team FELaaCZech that took part in the international competition Eurobot for four years. 
-
-Currently, she is a PhD student with a focus on AI planning and scheduling, which are important techniques for a robot to make decisions on when, how and what needs to be performed. Such decisions are necessary in service robotics when a robot needs to complete tasks assigned by a human. The robot needs to have a control framework that makes decisions concerning which particular task should be executed. The quality of the decisions influence the overall performance of the robot and of course, the robot's goal must satisfy as many of the requirements assigned by the humans as possible. Requirements for the robot's control framework are deadline awareness, handling uncertainty about task duration and resources, creating plans on how to complete general tasks and awareness of changes in the environment where the robot operates. 
-
-Her research is part of the EU STRANDS project \cite{strands}. "STRANDS aims to enable a robot to achieve robust and intelligent behaviour in human environments through adaptation to, and the exploitation of, long-term experience (at least 120 days by the end of the project).". Therefore, the robot's control framework will exploit long-term experiences and observations of the robot's world. 
-
-\subsection{Marco Antonio Becerra Pedraza}
-
-He is a PhD student in the School of Computer Science, University of Birmingham. His research interests are 3D perception, human sensing, knowledge representation and reasoning. Inside the team he has worked with the human sensing capabilities of the robot.
-
-\subsubsection*{Scientific background}
-He obtained his bachelor degree in Mechatronics Engineering from the Instituto Polit\'{e}cnico Nacional in Mexico and a master degree in Computer Science from the Universidad Nacional Aut\'{o}noma de M\'{e}xico. He is a former member of the PUMAS RoboCup@Home team.
-
-During his PhD, he will be doing research about semantic mapping of human events. The topic has two main components:
-
-Semantic mapping can be conceived as an extension of the mapping problem \cite{Nuchter08_TowardsSemanticMaps}. Traditionally maps were used in robotics mostly for navigation purposes. But the environment has additional spatial information that needs to be handled. Semantic maps extend the concept of maps to handle more features from the environment (e.g. structure, functionalities, events). The goal is to reason about the scene (e.g. planning, prediction, explanation, interpretation).
-
-Activity recognition is about using observations from the world to build representations of the ongoing actions. Later, these representations can be used to find associated structures.
-
-\subsection{Manolis Chiou}
-
-He is a PhD student with a multidisciplinary background in control engineering, robotics and AI. His work on BARC involves but is not limited to control, navigation, localisation and in the future Human-Robot-Interaction (HRI).
-
-\subsubsection*{Scientific background}
-
-His first degree is in Control Engineering from the Technological Institute of Piraeus, in which he got involved in a variety of robotic projects including demonstrating these projects to the public and exhibitions. His undergraduate thesis was on implementing control algorithms to robots (e.g. Model Predictive Control for stability/balance). He has an MSc in Computational Intelligence with his master thesis on formation control and transportation of objects with a swarm of robots.  
-
-The working title of his PhD thesis is ``Flexible robotic control via co-operation between an Operator and an AI based control system". It addresses the problem of variable autonomy in teleoperated mobile robots. Variable autonomy refers to the different levels of autonomous capabilities that are implemented on a robot.
-
-Robots used on demanding and safety critical tasks (e.g. search and rescue, hazardous environments inspection, bomb disposal), which are currently teleoperated, could soon start to benefit from autonomous capabilities. Such capabilities include algorithms for automatic robot navigation, algorithms for Simultaneous Localisation And Mapping (SLAM) and etc. Robots could usefully use AI control algorithms to autonomously take control of certain functions when the human operator is suffering a high workload, high cognitive load, anxiety, or other distractions and stresses. In contrast, some circumstances may still necessitate direct human control of the robot. The research will tackle the problem by designing control algorithms for switching between the different autonomy levels in an optimal way. 
-
-
-\subsection{Sean Bastable}
-
-He is a Computer Science bachelor's student in his final year. It is expected that he will continue to further his studies with a master's degree in Robotics. As the oldest BARC member, he has solid experience with ROS and different robotic platforms. He is also one of the team members who attended RoCKIn camp 2014 in Rome.
-
-\subsubsection*{Scientific background}
- 
-His final year project was about investigating and implementing a visual localisation system for a mobile robot. This allowed the robot to continue localising in environments where laser based localisation cannot be used. A good example of this is in domestic environments where the presence of people moving around the robot may obstruct the laser scan and provide false readings.
- 
-The project used a ceiling facing omnidirectional camera on the top of a robot in order to take pictures of its surroundings.
-The robot was trained by taking many pictures of the environment, along with location data provided through laser based localisation under ideal conditions. When localising, it can take additional pictures and compare them to the training images in order to find an estimate of its location. Principal Component Analysis (PCA) was used to match images in the localisation phase to those in the test phase. 
-
-Another potential use of this project is to provide an initial location estimate to a laser based localisation system in order to allow the robot to quickly localise from any position without any human input.
-
-This project follows on his previous summer project of a drinks serving robot used in a launch event for the 2014 British Science Festival. As the robot was moving in a crowd, one of the key failure points was that it could become de-localised. The robot had the need to know exactly where it is in order to effectively navigate through gaps in-between crowds. Visual localisation was considered as a potential solution but due to time constrains was not implemented.
 
 \section{\label{sec:hardware}Hardware}
 %from rules: Description of the hardware, including an image of the robot(s)
@@ -518,6 +412,13 @@ This project follows on his previous summer project of a drinks serving robot us
 \section{Software architecture}
 
 \input software.tex
+
+\input plan.tex
+
+\input evaluation.tex
+
+\input team_members.tex
+
 
 
 
