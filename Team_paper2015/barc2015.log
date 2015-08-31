@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.1)  31 AUG 2015 22:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.1)  31 AUG 2015 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,8 +416,15 @@ File: statemachine_t1.png Graphic file (type png)
 <use statemachine_t1.png>
 Package pdftex.def Info: statemachine_t1.png used on input line 62.
 (pdftex.def)             Requested size: 216.81pt x 197.9534pt.
-) (./evaluation.tex) (./team_members.tex [4 <./statemachine_t1.png>] [5]) (./ba
-rc2015.bbl
+) (./evaluation.tex
+<kitchen.JPG, id=25, 4288.02pt x 2858.68pt>
+File: kitchen.JPG Graphic file (type jpg)
+ <use kitchen.JPG>
+Package pdftex.def Info: kitchen.JPG used on input line 15.
+(pdftex.def)             Requested size: 216.81pt x 144.51268pt.
+)
+(./team_members.tex [4 <./statemachine_t1.png>] [5 <./kitchen.JPG>])
+(./barc2015.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -440,10 +447,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2321 strings out of 494989
- 33932 string characters out of 6180578
- 92883 words of memory out of 5000000
- 5517 multiletter control sequences out of 15000+600000
+ 2328 strings out of 494989
+ 34023 string characters out of 6180578
+ 93891 words of memory out of 5000000
+ 5522 multiletter control sequences out of 15000+600000
  39940 words of font info for 73 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
  27i,8n,21p,876b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -454,9 +461,9 @@ fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on barc2015.pdf (6 pages, 2178721 bytes).
+Output written on barc2015.pdf (6 pages, 5836020 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
