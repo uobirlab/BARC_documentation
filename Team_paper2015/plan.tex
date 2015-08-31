@@ -51,8 +51,7 @@ The state machine for this task from last year is in Fig.~\ref{fig:st1}.
 Our system was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with human in order to detect where is furniture. 
  However, the robot was unable to detect exact position of the furniture which is important to be able to use the knowledge later. 
 Therefore, we would like to integrate one of the STRANDS packages this year, which is able to detect dynamic clusters from 3D point clouds and recognise to which object they belong. 
-%TODO citation
-Additionally, we would like to detect objects as well, see Sec.~\ref{sec:objectbenchm}.
+Additionally, we would like to detect objects as well.
 
 Finally, we used CMU Sphinx last year for speech recognition. 
 However, this system is not proper for this usage due to limited dictionary and usage. 
@@ -65,32 +64,35 @@ Therefore, we are going to change our speech recognition system, see Sec.~\ref{s
 \label{fig:st1}
 \end{figure}
 
-\subsection{Object recognition benchmarking} %TODO name?
+\subsection{Object perception} 
 
-\subsection{Navigation functionality benchmark}
+We are currently comparing two different approaches for object detection and recognition. The first approach uses manually created point-cloud models with rgb information. 
+The advantage is that this algorithm detects the exact objects which were used for training. 
+%TODO slovicko occluded ???
+However, if the object is occluded then the detection is significantly worse.
+Additionally, this approach is possible for a small set of object because each object needs manually created model. 
 
-\subsection{Speech recognition functionality benchmark}
+In contrast, the second approach uses a database of 3D models of objects. These object do not represent any specific object, they rare created in software for 3D visualisation to represent a general object. 
+Hence, the second approach uses such database to train knowledge how general chair, mug, banana, etc. looks like. 
+
+\subsection{Navigation}
+
+We had robust configuration of navigation stack from ROS last year, which combined benefits from laser rangefinder and a depth camera. 
+Additionally, we have added monitored navigation to recover from failure and topological navigation in order to control behaviour of the robot in different rooms. Details are explained in Sec.~\ref{sec:software}.
+
+\subsection{\label{sec:speechrec}Speech understanding}
+
+Last year, we used CMU Sphinx for speech recognition with no added microphone. CMU Sphinx is not good enough for this benchmark. 
+Therefore, we have started to cooperate with research group of speech recognition in our faculty in order to deploy more sophisticated algorithm on our robot. 
+Unfortunately, no details are known yet, as the work on this benchmark will start in September.
 
 \subsection{Timetable}
 
 We are doing our best in order to participate in all tests. However, our priorities are following.
-First, we will perform complete \textit{Welcoming visitor} task (referred as MW). 
-Moreover, we will detect not only doors changes, but also precise locations of furniture in \textit{Getting to know my home}(referred as MG) task. 
-In \textit{}
+First, we will perform complete \textit{Welcoming visitor} task. 
+Moreover, we will detect not only doors changes, but also precise locations of furniture in \textit{Getting to know my home} task. 
+We will participate in \textit{Navigation} benchmark. We hope to participate in the rest of tasks, but it is depend if we will be able to recruit new team members.
 
- In order to achieve these goals, we set up our milestones:
-\begin{itemize}
-\item MW1 - training of a face, recognising a known person based on the face, mapping, localisation, robust navigation in a known map. Deadline: 7.5.2014
-\item MW2 - Increase robustness of face recognition, detection if a person is following the robot, speech recognition. Deadline: 27.7.2014
-\item MW3 - Integration and test, producing new video. Deadline: 31.7.2014
-\item MW4 - Cloth recognition, robot behaviour to restrict person to follow it. Deadline 31.8.2014
-\item MW5 - Integration and test. Deadline: 5.9.2014
-\item MW6 - \textbf{Perform complete \textit{Welcoming visitor} task during British science festival 6.9.-11.9.2014}
-\item MW7 - Perform more test. Deadline 30.9.2014
-\item MG1 - Work on autonomous recognition of state of doors, cooperation with human in detection of other changes. Deadline 31.10.2014
-\item Test of overall system. Deadline 23.11.2014
-\end{itemize}
-The expected timetable of our milestones can be seen in Fig. \ref{fig:plan}.
 
 %\begin{figure}[!htb]
 %\centering

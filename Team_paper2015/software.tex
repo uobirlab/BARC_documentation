@@ -2,7 +2,7 @@ As our goal is to achieve high re-usability, modularity and openness, we built o
 Additionally, our system this year uses some of the publicly released packages from the STRANDS project \cite{strands}. 
 This allows us not only integrate the cutting edge research to our robot, but also contribute to the evaluation of this research. 
 Moreover, we integrate our own research where our interest overlaps with the focus of the competition.
-Our system architecture contains six modules which are explained below.
+Our system architecture contains following modules.
 
 \subsection{State machine}
 
@@ -12,23 +12,17 @@ We have two main reasons for this decision. First, the competition defines all \
 For each of the benchmarks, we develop the state machine using ROS's SMACH package, that is ``a task-level architecture for rapidly creating complex robot behaviour" \cite{smach}. 
 All of the task's state machines are linked with the central state machine which communicates with the referee box and based on the accepted benchmarking test triggers specific state machines. 
 
-%TODO pictures
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[width=3.in]{state_machine.png}
-%\caption{SMACH state machine connecting all subsystems to one robotic framework}
-%\label{fig:smach}
-%\end{figure}
 
 \subsection{Database for robot knowledge}
 
 Robot's knowledge is managed in a database, which allows us not only record all data as rosbags, but also extract and separate data offline in order to evaluate our system in different scenarios. 
+We are using Robomongo \cite{robomongo}.
 
 \subsection{Navigation}
 
 We use standard ROS packages for localisation, mapping and low-level navigation (move-base), e.g. navigation planning path from an initial coordinates to the goal's ones. 
 This systems has proved great robustness in last year competition and we reuse it this year. However, we observed that at some cases, such as passing narrow doors and overcoming a doorstep, a special robot behaviour would be better. 
-Therefore, we extend our system by high-level topological navigation \cite{strand_top} and we can strongly benefit from three main features:
+Therefore, we extend our system by high-level topological navigation \cite{jaime} and we can strongly benefit from three main features:
 \begin{itemize}
 \item Waypoints and edges are managed in a database which allows even online modification.  
 \item A special robot behaviour can be specified on the edges overriding standard move-base.
@@ -47,9 +41,6 @@ Moreover, this year system is extended by an extra monitoring level, which overr
 \subsection{Low-level navigation using move-base} was used last year as the only navigation system. It is a proven robust solution for domestic environments \cite{Marder-Eppstein2010}. More specifically this node reads the odometry, the current pose estimate and the laser range finder scans and 3-D points clouds from a depth camera and safely drives the robot in the environment to a predefined goal. In order to navigate smoothly, it uses a combination of a global and a local planner. The global planner creates an optimal global path based on the robot's pose and a global cost-map. Then the local planner, which uses the \textit{Dynamic Window Approach} algorithm \cite{dwa}, is responsible for following the global path and reactively avoiding obstacles. 
 
 
-\subsection{Object detection and recognition}
-%small vs big
-%TODO
 
 \subsection{Human detection and recognition}
 
@@ -78,15 +69,15 @@ However, this detection is infeasible for robust performance due to high sensiti
 Therefore, we are currently working on an extension using an upper body detector. 
 The colour of the uniform will be then recognise only on this limited area, minimising the fall positives.
 
-\subsubsection{Direct person detection}
-%TODO leg detector, maybe STRANDS upper body detector maybe Luca's gaze thingy...
+%\subsubsection{Direct person detection}
+%leg detector, maybe STRANDS upper body detector maybe Luca's gaze thingy...
 
 
-\subsection{Human interaction}
-%TODO
+%\subsection{Human interaction}
 
-\subsection{Semantic mapping}
-%TODO
+
+%\subsection{Semantic mapping}
+
 
 
 
