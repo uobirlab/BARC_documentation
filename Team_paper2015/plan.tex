@@ -43,11 +43,23 @@ In this task, a robot should recognise changes in a flat, such as open/closed do
 The robot can detect these changes autonomously or by cooperation with a human who used speech or gestures.
 After detection, the robot is asked to use this new knowledge to execute some commands, such as to bring a mug on the dining table which is now in living room.
 
-Our system last year was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with human in order to detect where is furniture. 
+The state machine for this task from last year is in Fig.~\ref{fig:st1}.
+Our system was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with human in order to detect where is furniture. 
  However, the robot was unable to detect exact position of the furniture which is important to be able to use the knowledge later. 
 Therefore, we would like to integrate one of the STRANDS packages this year, which is able to detect dynamic clusters from 3D point clouds and recognise to which object they belong. 
 %TODO citation
-Moreover, we would like to detect objects as well, see Sec.~\ref{sec:objectbenchm}.
+Additionally, we would like to detect objects as well, see Sec.~\ref{sec:objectbenchm}.
+
+Finally, we used CMU Sphinx last year for speech recognition. 
+However, this system is not proper for this usage due to limited dictionary and usage. 
+Therefore, we are going to change our speech recognition system, see Sec.~\ref{sec:speechrec}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=3.in]{statemachine_t1.png}
+\caption{The state machine for task Getting to know my home}
+\label{fig:st1}
+\end{figure}
 
 \subsection{Object recognition benchmarking} %TODO name?
 
