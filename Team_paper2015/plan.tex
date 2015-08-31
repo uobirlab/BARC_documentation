@@ -4,7 +4,7 @@
 % % % TODO % % % %
 %from rules: Innovative technology (if any) TODO describe usage of STRANDS
 %from rules: Reusability of the system or parts thereof - see STRANDS
-This section summarises our intentions for our system this year. We would like to aim for high reusability of the code in our robotic system and to demonstrate that the current state of the art in AI algorithms mixed with our extensions can be successfully used to produce a robust, effective and complete robotic system with domestic applications.  
+This section summarises our intentions for our system this year. We would like to aim for high re-usability of code in our robotic system and to demonstrate that the current state of the art in AI algorithms mixed with our extensions can be successfully used to produce a robust, effective and complete robotic system with domestic applications.  
 
 \subsection{Catering for Granny Annie’s Comfort}
 
@@ -18,15 +18,36 @@ This section summarises our intentions for our system this year. We would like t
 
 \subsection{Welcoming visitors}
 
-Last year, we successfully completed this task. Hence, the main structure is built. We are improving the uniform detection to increase robustness. 
-Moreover, we are improving our human detection system, for example, we are making tests with an IR camera.
+In this task, a robot should welcome visitors, recognise them and accompany them to a specific location in Granny's flat. Several components are needed in this task: computer vision for face recognition and for uniform detection. Moreover, machine learning techniques are needed to be able to learn these two patterns in order to recognise them. A robot can also benefit from speech recognition if face/uniform recognition does not provide a certain decision. Additionally, a robot must have robust navigation in an environment in order to accompany a person to a specific place. 
+Finally, human-robot interaction is needed while accompanying a person.
+
+Last year, we successfully completed this task. Our system was built on several components which are mentioned in Sec.~\ref{sec:software}. 
+Here, we would like to discuss their properties, advantages and disadvantages and their future extensions. 
+Our core state machine is built for this task calling several components. 
+We do not plan changes in our face recognition system as neither of us is an expert in this field. 
+However, we will create bigger database of faces in order to support machine learning algorithm.
+
+Uniform recognition needs to be improved due to following reasons.
+First, recognition was based on manual sensitive calibration of colours last year, which slowed down preparation and the calibration was sometimes impossible. 
+Second, uniform detection was based only on segmentation of all the picture. This means, if there is significantly big object of certain colour belonging to an uniform (white/yellow) in the background, this object will be classified as the person. 
+Both issue were limitations last year and we are improving them.  
+
+The last issue of our system last year was not sufficient detection of a human. Thus, our human-robot interaction was strongly limited. 
+We were using only a leg detector based on the readings from the laser scanner. 
+This system was not robust enough. 
+Hence we are testing how to combine this system with an upper-body detector based on a depth camera or an IR camera.
 
 \subsection{Getting to know my home}
 
-We proved last year, that our system is able to robustly detect doors using laser rangefinder. Moreover, we were able to detect changes in furniture. However, the robot was unable to detect exact position of the furniture which is important to be able to use the knowledge later. 
-Therefore, we would like to integrate one of the STRANDS packages, which is able to detect dynamic clusters from 3D point clouds and recognise to which object they belong. 
+In this task, a robot should recognise changes in a flat, such as open/closed doors, furniture has been moved to another room or everyday objects were moved. 
+The robot can detect these changes autonomously or by cooperation with a human who used speech or gestures.
+After detection, the robot is asked to use this new knowledge to execute some commands, such as to bring a mug on the dining table which is now in living room.
+
+Our system last year was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with human in order to detect where is furniture. 
+ However, the robot was unable to detect exact position of the furniture which is important to be able to use the knowledge later. 
+Therefore, we would like to integrate one of the STRANDS packages this year, which is able to detect dynamic clusters from 3D point clouds and recognise to which object they belong. 
 %TODO citation
-Moreover, we would like to detect objects as well.
+Moreover, we would like to detect objects as well, see Sec.~\ref{sec:objectbenchm}.
 
 \subsection{Object recognition benchmarking} %TODO name?
 
