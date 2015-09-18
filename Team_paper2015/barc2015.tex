@@ -1,101 +1,10 @@
 
-%% bare_conf.tex
-%% V1.3
-%% 2007/01/11
-%% by Michael Shell
-%% See:
-%% http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
-%% and
-%% http://www.ieee.org/
 
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
-%% User assumes all risk.
-%% In no event shall IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%
-%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
-%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
-%%*************************************************************************
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. IEEE's font choices can trigger bugs that do  ***
-% *** not appear when using other class files.                            ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
-% should be used if it is desired that the figures are to be displayed in
-% draft mode.
-%
 \documentclass[conference]{IEEEtran}
 
 
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-% *** CITATION PACKAGES ***
 \usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
-% not currently provide for hyperlinked citations.
-% The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
-% The documentation is contained in the cite.sty file itself.
+
 
 
 
@@ -177,20 +86,6 @@
 % http://www.ctan.org/tex-archive/macros/latex/required/tools/
 
 
-%\usepackage{mdwmath}
-%\usepackage{mdwtab}
-% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
-% especially mdwmath.sty and mdwtab.sty which are used to format equations
-% and tables, respectively. The MDWtools set is already installed on most
-% LaTeX systems. The lastest version and documentation is available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
 %\usepackage{eqparbox}
 % Also of notable interest is Scott Pakin's eqparbox package for creating
 % (automatically sized) equal width boxes - aka "natural width parboxes".
@@ -231,7 +126,6 @@
 
 
 
-
 % *** FLOAT PACKAGES ***
 %
 %\usepackage{fixltx2e}
@@ -243,7 +137,6 @@
 % single column figure to be placed prior to an earlier double column
 % figure. The latest version and documentation can be found at:
 % http://www.ctan.org/tex-archive/macros/latex/base/
-
 
 
 %\usepackage{stfloats}
@@ -268,30 +161,19 @@
 
 
 
-% *** PDF, URL AND HYPERLINK PACKAGES ***
 \usepackage{url}
 % \url{my_url_here}.
 
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-% allow non-ascii characters
 \usepackage[utf8]{inputenc}
-
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 
 \begin{document}
-%
-% paper title
+
 % can use linebreaks \\ within to get better formatting as desired
-\title{Birmingham Autonomous Robot Club (BARC)\\
+\title{Birmingham Autonomous Robotic Club (BARC)\\
 \LARGE Motto: \textit{Learning by doing}}
 
 
@@ -300,42 +182,7 @@
 Email: robot-club@cs.bham.ac.uk\\
 Affiliation: School of Computer Science, University of Birmingham, UK\\
 Website: \textit{http://lenka-robotics.eu/index.php/robotic-club}}
-%\and
-%\IEEEauthorblockN{Ashish Kumar}
-%\IEEEauthorblockA{axk380@cs.bham.ac.uk}
-%\and
-%\IEEEauthorblockN{}
-%\IEEEauthorblockA{@cs.bham.ac.uk}
 }
-
-
-% conference papers do not typically use \thanks and this command
-% is locked out in conference mode. If really needed, such as for
-% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
-% after \documentclass
-
-% for over three affiliations, or if they all won't fit within the width
-% of the page, use this alternative format:
-% 
-%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
-%Homer Simpson\IEEEauthorrefmark{2},
-%James Kirk\IEEEauthorrefmark{3}, 
-%Montgomery Scott\IEEEauthorrefmark{3} and
-%Eldon Tyrell\IEEEauthorrefmark{4}}
-%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
-%Georgia Institute of Technology,
-%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
-%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
-%Email: homer@thesimpsons.com}
-%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
-%Telephone: (800) 555--1212, Fax: (888) 555--1212}
-%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
 
 
 % make the title area
@@ -345,7 +192,7 @@ Website: \textit{http://lenka-robotics.eu/index.php/robotic-club}}
 
 Birmingham Autonomous Robot Club (BARC) connects students from the University of Birmingham, with a strong interest in robotic applications and competitions. 
 This paper is part of our qualification for the RoCKIn@Home 2015 competition. 
-Therefore, it overviews our robot Dora and developed software structure based on ROS middleware.
+Therefore, it overviews our robot Dora and the developed software structure based on ROS middleware.
 
 It overviews how this challenge relates to our interests and experiences and how we can achieve high reusability of our system by integrating different subsystems from other projects. Moreover, team members, their experiences and research interests are described in detail. 
 
@@ -353,48 +200,22 @@ Finally, the conclusion summarises our motivation and relevance for this competi
 
 
 \end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the conference you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals/conferences frown on
-% math in the abstract anyway.
 
-% no keywords
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
 
 
 \section{Introduction}
-% no \IEEEPARstart
 
+Birmingham Autonomous Robotic Club (BARC) was established in 2011 in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to gain additional knowledge about robotics and to work on real robotic platforms and projects. Several students involved in the team contributed to projects which were mainly used to promote robotics during the school's open days. For example a robotic waitress which accepted orders for drinks and deliver them.
 
-
-
-Birmingham Autonomous Robot Club (BARC) was established in 2011 in the School of Computer Science at the University of Birmingham. The main purpose was to provide an extra opportunity for students to gain additional knowledge about robotics and to work on real robotic platforms and projects. 
-%Students were familiarising themselves with the Robot Operating System (ROS) by using a variety of ROS libraries and packages.
-Several students involved in the team contributed to projects, which were mainly used to promote robotics during the school's open days, for example a robotic waitress, which accepted orders for drinks and deliver them.
-% This robot had no manipulation, drinks were placed on the robot by a person. Another example is a project using a Nao robot to repeat kids' gestures. An extra Kinect sensor was used to recognise the gestures. In spite of these interesting projects, a lot of students involved in previous years in the club had no real goal and no real deadlines, thus they did not produce any comprehensive work.
-
-In 2014, the BARC structure was changed in order to incorporate the lessons learned and to allow the team to take part in robotics competitions. We participated in Sick Days 2014 \cite{sick} and RoCKIn@Home 2014. 
-This year, we would like to participate in RoCKIn@Home as well, as we have still many things to learn and improve. 
-Hence, this paper overviews our system from last year and analyses drawbacks of our approaches. 
-Moreover, it discuss extensions what we are currently working on. 
+In 2014, the structure of BARC was changed in order to incorporate the lessons learned and to allow the team to take part in robotics competitions. We participated successfully in Sick Days 2014 \cite{sick} and RoCKIn@Home 2014. In the latter we won two of the competition challenges. This year, we would like to participate again in RoCKIn@Home as we have still many things to learn, improve and most importantly contribute. 
 
 The team has the support of the Intelligent Robotics Lab \cite{irlab} in the School of Computer Science. The lab conducts research and has expertise in a variety of fields including but not limited to computer vision, manipulation, planning, architectures, reasoning and mobile robots. Furthermore, the lab has strong links with the industry. 
 We are also starting to cooperate with other departments within our university, such as electrical and mechanical engineering. We hope to create more interdisciplinary team than we had last year.
+
+This paper overviews our system from last year and analyses the drawbacks of our solutions. Moreover, it extensively discusses what we are currently working on. 
+
 
 \begin{figure}[!t]
 \centering
