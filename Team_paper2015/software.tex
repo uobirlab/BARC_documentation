@@ -7,7 +7,7 @@ Our system architecture contains following modules.
 \subsection{State machine}
 
 Even though AI planning is in our expertise, we use \textit{finite state machines} to control and monitor robot's states and actions. 
-We have two main reasons for this decision. First, the competition defines all \textit{task benchmarks} as short scripts, so a robot does not have too much freedom in decisions how to fulfil a task. Second, a state machine provides us with \textit{repeatability} during testing.
+We have two main reasons for this decision. First, the competition defines all \textit{task benchmarks} as short scripts, so a robot does not have too much freedom in decisions how to fulfil a task. Second, the state machine provides us with \textit{repeatability} during testing.
 
 For each of the benchmarks, we develop the state machine using ROS's SMACH package, that is ``a task-level architecture for rapidly creating complex robot behaviour" \cite{smach}. 
 All of the task's state machines are linked with the central state machine which communicates with the referee box and based on the accepted benchmarking test triggers specific state machines. 
@@ -15,19 +15,19 @@ All of the task's state machines are linked with the central state machine which
 
 \subsection{Database for robot knowledge}
 
-Robot's knowledge is managed in a database, which allows us not only record all data as rosbags, but also extract and separate data offline in order to evaluate our system in different scenarios. 
+Robot's knowledge is managed in a database, which allows us not only record all data (same functionality as rosbag), but also extract and separate data offline in order to evaluate our system in different scenarios. 
 We are using Robomongo \cite{robomongo}.
 
 \subsection{Navigation}
 
 We use standard ROS packages for localisation, mapping and low-level navigation (move-base), e.g. navigation planning path from an initial coordinates to the goal's ones. 
-This systems has proved great robustness in last year competition and we reuse it this year. However, we observed that at some cases, such as passing narrow doors and overcoming a doorstep, a special robot behaviour would be better. 
+This system has proved great robustness in last year during competition and we reuse it this year. However, we observed that at some cases, such as passing narrow doors and overcoming a doorstep, a special robot behaviour would be better. 
 Therefore, we extend our system by high-level topological navigation \cite{jaime} and we can strongly benefit from three main features:
 \begin{itemize}
 \item Waypoints and edges are managed in a database which allows even online modification.  
 \item A special robot behaviour can be specified on the edges overriding standard move-base.
 \item A navigation policy \cite{bruno} provides paths on the top of the topological map containing waypoints. 
- Thus, the robot must pass the surrounding area of the waypoint on the path. This can be mainly used to demand certain robot movements and keep the robot from obstacles in an environment.
+ Thus, the robot must pass the surrounding area of the waypoint on the path. This can be mainly used to demand certain robot movements and keep the robot from obstacles in the environment.
  
 Moreover, this year system is extended by an extra monitoring level, which overrides the standard move-base behaviour when the robot needs to recover from being stuck, etc. 
 %The overall architecture used for navigation is on Fig.~\ref{fig:navigation}.
