@@ -8,11 +8,11 @@ This section summarises our intentions for our system this year. We would like t
 
 \subsection{Catering for Granny Annie’s Comfort}
 
-A robot will receive commands from Granny Annie by natural speech. These commands may contain interaction with an intelligent flat or bringing to her a specific object. 
-We have not participated in this task last year because we had not a robust speech recognition as neither of us is an expert in the field. 
-However, we have started a cooperation with research group in this field and we hope to be able to recognise speech more robustly than using CMU Sphinx last year, see Sec.~\ref{sec:speechrec}.
+A robot will receive commands from Granny Annie by natural speech. These commands may contain interaction with an intelligent flat or require the robot to bring her a specific object. 
+We did not participate in this task last year because we did not have robust speech recognition as neither of us is an expert in the field. 
+However, we have started a cooperation with a research group in this field and we hope to be able to recognise speech more robustly than using CMU Sphinx last year, see Sec.~\ref{sec:speechrec}.
 
-We would like to prepare our robot so that it can perform the first part - cooperation/interaction with an intelligent flat. This subtask still contains interesting challenges, such as robust speech recognition and robot navigation in a way, which is comfortable and natural for a human.  
+We would like to prepare our robot so that it can perform the first part - cooperation/interaction with an intelligent flat. This subtask still contains interesting challenges, such as robust speech recognition and robot navigation in a way which is comfortable and natural for a human.  
 
 %The problem of speech recognition is often discussed within the robotic community. It is something, which is necessary for future robots to cooperate with humans. Assuming a robot is working at Granny's flat, the robot can learn and adapt to her voice, which will increases its performance over time. Moreover, Granny is living alone, thus, it can be assumed that the level of background noise is minimal. In contrast, during the competition, speech recognition provides a lot of challenges. The background noise is really high during competition because of the spectators. Furthermore, the person playing Granny Annie changes, hence a robot cannot improve its behaviour. 
 
@@ -29,38 +29,38 @@ Last year, we successfully completed this task. Our system was built on several 
 Here, we would like to discuss their properties, advantages and disadvantages and their future extensions. 
 Our core state machine is built for this task calling several components. 
 We do not plan changes in our face recognition system as neither of us is an expert in this field. 
-However, we will create bigger database of faces in order to support machine learning algorithm.
+However, we will create a larger database of faces in order to support a machine learning algorithm.
 
-Uniform recognition needs to be improved due to following reasons.
+Uniform recognition needs to be improved due to the following reasons.
 First, recognition was based on manual sensitive calibration of colours last year, which slowed down preparation and the calibration was sometimes impossible. 
-Second, uniform detection was based only on segmentation of all the picture. This means, if there is significantly big object of certain colour belonging to an uniform (white/yellow) in the background, this object will be classified as the person. 
-Both issue were limitations last year and we are improving them.  
+Second, uniform detection was based only on segmentation of all of the picture. This means, if there is a significantly large object of a certain colour belonging to a uniform (white/yellow) in the background, this object will be classified as the person. 
+Both issues were limitations last year and we are improving them.  
 
-The last issue of our system last year was not sufficient detection of a human. Thus, our human-robot interaction was strongly limited. 
+The last issue of our system last year was insufficient detection of a human. Thus, our human-robot interaction was strongly limited. 
 We were using only a leg detector based on the readings from the laser scanner. 
 This system was not robust enough. 
 Hence we are testing how to combine this system with an upper-body detector based on a depth camera or an IR camera.
 
 \subsection{Getting to know my home}
 
-In this task, a robot should recognise changes in a flat, such as open/closed doors, furniture has been moved to another room or everyday objects were moved. 
-The robot can detect these changes autonomously or by cooperation with a human who used speech or gestures.
+In this task, a robot should recognise changes in a flat, such as open/closed doors, furniture which has been moved to another room or everyday objects which were moved. 
+The robot can detect these changes autonomously or by cooperation with a human who uses speech or gestures.
 After detection, the robot is asked to use this new knowledge to execute some commands, such as to bring a mug on the dining table which is now in living room.
 
 The state machine for this task from last year is in Fig.~\ref{fig:st1}.
-Our system was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with human in order to detect where is furniture. 
- However, the robot was unable to detect exact position of the furniture which is important to be able to use the knowledge later. 
-Therefore, we would like to integrate one of the STRANDS packages this year, which is able to detect dynamic clusters from 3D point clouds and recognise to which object they belong. 
+Our system was built on two parts - autonomous detection of doors using the laser rangefinder and cooperation with a human in order to detect where the furniture is. 
+ However, the robot was unable to detect the exact position of the furniture which is important to be able to use the knowledge later. 
+Therefore, we would like to integrate one of the STRANDS packages this year, which is able to detect dynamic clusters from 3D point clouds and recognise which object they belong to. 
 Additionally, we would like to detect objects as well.
 
 Finally, we used CMU Sphinx last year for speech recognition. 
-However, this system is not proper for this usage due to limited dictionary and usage. 
+However, this system is not proper for this usage due to its limited dictionary and usage. 
 Therefore, we are going to change our speech recognition system, see Sec.~\ref{sec:speechrec}.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=3.in]{statemachine_t1.png}
-\caption{The state machine for task Getting to know my home}
+\caption{The state machine for the task Getting to know my home}
 \label{fig:st1}
 \end{figure}
 
@@ -70,10 +70,10 @@ We are currently comparing two different approaches for object detection and rec
 The advantage is that this algorithm detects the exact objects which were used for training. 
 %TODO slovicko occluded ???
 However, if the object is occluded then the detection is significantly worse.
-Additionally, this approach is possible for a small set of object because each object needs manually created model. 
+Additionally, this approach is possible for a small set of objects because each object needs a manually created model. 
 
-In contrast, the second approach uses a database of 3D models of objects. These object do not represent any specific object, they rare created in software for 3D visualisation to represent a general object. 
-Hence, the second approach uses such database to train knowledge how general chair, mug, banana, etc. looks like. 
+In contrast, the second approach uses a database of 3D models of objects. These objects do not represent any specific object, they are created in software for 3D visualisation to represent a general object. 
+Hence, the second approach uses such a database to train its knowledge of what a general chair, mug, banana, etc. looks like. 
 
 We are additionally evaluating an approach which uses transfer learning to recognise objects using a convolutional neural network (CNN) which has been pre-trained for another task, in our case, image classification \cite{schwarz}. An RGB-D pair of images is first pre-processed as shown in Fig.~\ref{fig:object_perception}. Next, the images are processed by the CNN in order to extract a vector of image features for each RGB-D frame. This feature vector is used with a tree of classifiers and regressors to determine first the category of the object, then the object instance, and finally the pose of the object.
 
@@ -92,15 +92,15 @@ Additionally, we have added monitored navigation to recover from failure and top
 \subsection{\label{sec:speechrec}Speech understanding}
 
 Last year, we used CMU Sphinx for speech recognition with no added microphone. CMU Sphinx is not good enough for this benchmark. 
-Therefore, we have started to cooperate with research group of speech recognition in our faculty in order to deploy more sophisticated algorithm on our robot. 
+Therefore, we have started to cooperate with the speech recognition research group in our faculty in order to deploy a more sophisticated algorithm on our robot. 
 Unfortunately, no details are known yet, as the work on this benchmark will start in September.
 
 \subsection{Timetable}
 
-We are doing our best in order to participate in all tests. However, our priorities are following.
-First, we will perform complete \textit{Welcoming visitor} task. 
-Moreover, we will detect not only doors changes, but also precise locations of furniture in \textit{Getting to know my home} task. 
-We will participate in \textit{Navigation} benchmark. We hope to participate in the rest of tasks, but it is depend if we will be able to recruit new team members.
+We are doing our best in order to participate in all tests. However, our priorities are the following.
+First, we will perform the complete \textit{Welcoming visitors} task. 
+Moreover, we will detect not only doors changes, but also precise locations of furniture in the \textit{Getting to know my home} task. 
+We will participate in the \textit{Navigation} benchmark. We hope to participate in the rest of the tasks, but it depends on whether we will be able to recruit new team members.
 
 
 %\begin{figure}[!htb]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.29)  30 SEP 2015 03:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.29)  30 SEP 2015 04:36
 entering extended mode
  %&-line parsing enabled.
 **barc2015.tex
@@ -411,8 +411,8 @@ File: statemachine_t1.png Graphic file (type png)
 <object_perception.png, id=25, 1347.0325pt x 680.5425pt>
 File: object_perception.png Graphic file (type png)
 
-<use object_perception.png>) (./evaluation.tex [4 <./statemachine_t1.png> <./ob
-ject_perception.png>] <kitchen.JPG, id=31, 4288.02pt x 2858.68pt>
+<use object_perception.png> [4 <./statemachine_t1.png> <./object_perception.png
+>]) (./evaluation.tex <kitchen.JPG, id=31, 4288.02pt x 2858.68pt>
 File: kitchen.JPG Graphic file (type jpg)
 
 <use kitchen.JPG>) (./team_members.tex [5 <./kitchen.JPG>]) (./barc2015.bbl
@@ -452,7 +452,7 @@ etic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texli
 ve/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on barc2015.pdf (6 pages, 6118148 bytes).
+Output written on barc2015.pdf (6 pages, 6118356 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

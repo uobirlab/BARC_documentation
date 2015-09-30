@@ -1,13 +1,13 @@
 As our goal is to achieve high re-usability, modularity and openness, we built our software architecture on the Robot Operating System (ROS) middleware, using version Indigo \cite{ros} running on Ubuntu Trusty Tahr. 
 Additionally, our system this year uses some of the publicly released packages from the STRANDS project \cite{strands}. 
-This allows us not only integrate the cutting edge research to our robot, but also contribute to the evaluation of this research. 
+This allows us to not only integrate the cutting edge research to our robot, but also to contribute to the evaluation of this research. 
 Moreover, we integrate our own research where our interest overlaps with the focus of the competition.
-Our system architecture contains following modules.
+Our system architecture contains the following modules.
 
 \subsection{State machine}
 
-Even though AI planning is in our expertise, we use \textit{finite state machines} to control and monitor robot's states and actions. 
-We have two main reasons for this decision. First, the competition defines all \textit{task benchmarks} as short scripts, so a robot does not have too much freedom in decisions how to fulfil a task. Second, a state machine provides us with \textit{repeatability} during testing.
+Even though AI planning is in our expertise, we use \textit{finite state machines} to control and monitor the robot's states and actions. 
+We have two main reasons for this decision. First, the competition defines all \textit{task benchmarks} as short scripts, so a robot does not have too much freedom in decisions on how to fulfil a task. Second, a state machine provides us with \textit{repeatability} during testing.
 
 For each of the benchmarks, we develop the state machine using ROS's SMACH package, that is ``a task-level architecture for rapidly creating complex robot behaviour" \cite{smach}. 
 All of the task's state machines are linked with the central state machine which communicates with the referee box and based on the accepted benchmarking test triggers specific state machines. 
@@ -15,28 +15,28 @@ All of the task's state machines are linked with the central state machine which
 
 \subsection{Database for robot knowledge}
 
-Robot's knowledge is managed in a database, which allows us not only record all data as rosbags, but also extract and separate data offline in order to evaluate our system in different scenarios. 
+The robot's knowledge is managed in a database, which allows us not only to record all data as rosbags, but also to extract and separate data offline in order to evaluate our system in different scenarios. 
 We are using Robomongo \cite{robomongo}.
 
 \subsection{Navigation}
 
-We use standard ROS packages for localisation, mapping and low-level navigation (move-base), e.g. navigation planning path from an initial coordinates to the goal's ones. 
-This systems has proved great robustness in last year competition and we reuse it this year. However, we observed that at some cases, such as passing narrow doors and overcoming a doorstep, a special robot behaviour would be better. 
-Therefore, we extend our system by high-level topological navigation \cite{jaime} and we can strongly benefit from three main features:
+We use standard ROS packages for localisation, mapping and low-level navigation (move-base), e.g. navigation planning path from initial coordinates to the goal's ones. 
+These systems proved great for robustness in last year's competition and we are reusing them this year. However, we observed that at some cases, such as passing narrow doors and overcoming a doorstep, a special robot behaviour would be better. 
+Therefore, we are extending our system using high-level topological navigation \cite{jaime} and we can strongly benefit from three main features:
 \begin{itemize}
 \item Waypoints and edges are managed in a database which allows even online modification.  
 \item A special robot behaviour can be specified on the edges overriding standard move-base.
 \item A navigation policy \cite{bruno} provides paths on the top of the topological map containing waypoints. 
- Thus, the robot must pass the surrounding area of the waypoint on the path. This can be mainly used to demand certain robot movements and keep the robot from obstacles in an environment.
+ Thus, the robot must pass the surrounding area of the waypoint on the path. This can be mainly used to demand certain robot movements and keep the robot away from obstacles in an environment.
  
-Moreover, this year system is extended by an extra monitoring level, which overrides the standard move-base behaviour when the robot needs to recover from being stuck, etc. 
+Moreover, this year the system is extended by an extra monitoring level, which overrides the standard move-base behaviour when the robot needs to recover from being stuck, etc. 
 %The overall architecture used for navigation is on Fig.~\ref{fig:navigation}.
 
 \end{itemize}
 
 \subsection{Mapping} is done by \textit{OpenSlam's GMapping} algorithm \cite{slam} through the ROS wrapper package called \textsf{slam gmapping}. This approach uses a Rao-Blackwellized particle filter in which each particle carries an individual map of the environment. The particles are updated by taking into account both odometry and the latest observations from a laser range finder.
 
-\subsection{Localisation} in a known map uses an \textit{Adaptive Monte Carlo Localisation} (AMCL)\cite{amcl} algorithm. This node is part of the ROS \textsf{navigation stack} package. It uses laser range finder readings to update a particle filter. Every particle represents a specific discrete state and stores the uncertainty of the robot being in that state/position within the known map. Also, every time the robot moves it uses the motor information to shift the particles to the corresponding direction.
+\subsection{Localisation} in a known map uses an \textit{Adaptive Monte Carlo Localization} (AMCL)\cite{amcl} algorithm. This node is part of the ROS \textsf{navigation stack} package. It uses laser range finder readings to update a particle filter. Every particle represents a specific discrete state and stores the uncertainty of the robot being in that state/position within the known map. Also, every time the robot moves it uses the motor information to shift the particles to the corresponding direction.
 
 \subsection{Low-level navigation using move-base} was used last year as the only navigation system. It is a proven robust solution for domestic environments \cite{Marder-Eppstein2010}. More specifically this node reads the odometry, the current pose estimate and the laser range finder scans and 3-D points clouds from a depth camera and safely drives the robot in the environment to a predefined goal. In order to navigate smoothly, it uses a combination of a global and a local planner. The global planner creates an optimal global path based on the robot's pose and a global cost-map. Then the local planner, which uses the \textit{Dynamic Window Approach} algorithm \cite{dwa}, is responsible for following the global path and reactively avoiding obstacles. 
 
@@ -48,7 +48,7 @@ Human detection can be split to indirect, when a robot must use only an RGB came
 
 \subsubsection{\label{sec:vision}Indirect Face detection and recognition}
 
-Face detection, see Fig. \ref{fig:face}, is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm looks for faces by applying incrementally many simple Haar classifiers. The composition is performed by a cascade function, which needs to be trained \textit{a priori} with many positive and negative images. The resulting classifier can find faces efficiently with independence of the size of the faces and light conditions.
+Face detection, see Fig. \ref{fig:face}, is performed using the \textit{Viola-Jones} algorithm \cite{Viola01_RapidObjDet}. The algorithm looks for faces by incrementally applying many simple Haar classifiers. The composition is performed by a cascade function, which needs to be trained \textit{a priori} with many positive and negative images. The resulting classifier can find faces efficiently with independence of the size of the faces and light conditions.
 
 Face recognition is performed by applying a \textit{Local Binary Pattern Histogram} (LBPH) algorithm \cite{Ahonen04_FaceRecLBP}. The principle of the algorithm is to build local binary patterns (LBP) for each pixel depending on a variable neighbourhood scheme. Then, it divides the formed LBP image into $m$ local regions and computes the LBP distribution histogram from each region. Finally, classification is performed by comparison between the LBP histograms of a new face with the ones from the dataset.
 
