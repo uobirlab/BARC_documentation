@@ -1,10 +1,54 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: barc2015.aux
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: barc2015.aux
 The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ./ref.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty booktitle in Marder-Eppstein2010
+Warning--empty journal in schwarz
 
 Done.
-(There was 1 warning)
+You've used 17 entries,
+            4039 wiz_defined-function locations,
+            909 strings with 10482 characters,
+and the built_in function-call counts, 11014 in all, are:
+= -- 843
+> -- 261
+< -- 79
++ -- 135
+- -- 46
+* -- 511
+:= -- 1674
+add.period$ -- 30
+call.type$ -- 17
+change.case$ -- 14
+chr.to.int$ -- 195
+cite$ -- 19
+duplicate$ -- 804
+empty$ -- 963
+format.name$ -- 57
+if$ -- 2523
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 156
+newline$ -- 74
+num.names$ -- 18
+pop$ -- 382
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 858
+stack$ -- 0
+substring$ -- 453
+swap$ -- 612
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 17
+warning$ -- 2
+while$ -- 42
+width$ -- 19
+write$ -- 171
+(There were 2 warnings)

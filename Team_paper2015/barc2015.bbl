@@ -23,8 +23,8 @@
 
 \bibitem{sick}
 sick, \emph{SICK robot day},
-  \url{http://www.sick.com/group/de/home/pr/events/robot_day/seiten/robot_day_overview.aspx},
-  accessed May 2015.
+  \url{http://www.sick.com/group/de/home/pr/events/robot_day/seiten/robot_day_%
+overview.aspx}, accessed May 2015.
 
 \bibitem{irlab}
 IRLab, \emph{Intelligent Robotics Lab (IRLab), School of Computer Science,
@@ -94,6 +94,11 @@ T.~Ahonen, A.~Hadid, and M.~Pietik\"{a}inen, ``Face recognition with local
   binary patterns,'' in \emph{Computer Vision - ECCV 2004}, ser. Lecture Notes
   in Computer Science, T.~Pajdla and J.~Matas, Eds.\hskip 1em plus 0.5em minus
   0.4em\relax Springer Berlin Heidelberg, 2004, vol. 3021, pp. 469--481.
+
+\bibitem{schwarz}
+M.~Schwarz, H.~Schulz, and S.~Behnke, ``Rgb-d object recognition and pose
+  estimation based on pre-trained convolutional neural network features,''
+  2015.
 
 \bibitem{barc_web}
 web, \emph{Our homepage},
